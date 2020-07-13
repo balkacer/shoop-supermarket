@@ -1,0 +1,48 @@
+@model shoopsupermarket.Models.Articulo
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Articulo</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DESC)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DESC)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PRE_VENT)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PRE_VENT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.STOCK)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.STOCK)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PRE_COMP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PRE_COMP)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PROV)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PROV.NAME)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ARTI_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

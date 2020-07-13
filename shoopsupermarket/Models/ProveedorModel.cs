@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.RegularExpressions;
 
 namespace shoopsupermarket.Models
@@ -25,5 +27,9 @@ namespace shoopsupermarket.Models
 
         [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "¡Número de teléfono no valido!")]
         public string PHONE2 { get; set; }
+
+        
+        [ForeignKey("PROVRefId")]
+        public ICollection<Articulo> Articulos { get; set; }
     }
 }

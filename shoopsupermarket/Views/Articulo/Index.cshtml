@@ -1,0 +1,59 @@
+@model IEnumerable<shoopsupermarket.Models.Articulo>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DESC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRE_VENT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.STOCK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PRE_COMP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PROV)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DESC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRE_VENT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.STOCK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRE_COMP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROV.NAME)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ARTI_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ARTI_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ARTI_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

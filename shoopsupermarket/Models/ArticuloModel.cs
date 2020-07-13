@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace shoopsupermarket.Models
 {
@@ -16,7 +17,7 @@ namespace shoopsupermarket.Models
         public string DESC { get; set;}
 
 
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Display(Name = "Precio de Venta")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
         public double PRE_VENT { get; set;}
@@ -28,13 +29,15 @@ namespace shoopsupermarket.Models
 
 
         [Display(Name = "Precio de Compra")]
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
         public double PRE_COMP { get; set;}
 
         
-        [Display(Name = "Codigo de Proveedor")]
+        [Display(Name = "Proveedor")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        public ICollection<Proveedor> PROV_ID { get; set;}
+        public int PROVRefId { get; set;}
+        [Display(Name = "Proveedor")]
+        public Proveedor PROV { get; set; }
     }
 }
