@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace shoopsupermarket.Models.Login
+namespace shoopsupermarket.Models
 {
     public class Login
     {
