@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
+  "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -20521,88 +20521,88 @@
   "RootNamespace": "shoopsupermarket",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Create.cshtml",
-      "TargetPath": "Views\\Articulo\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Index.cshtml",
-      "TargetPath": "Views\\Proveedor\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Create.cshtml",
-      "TargetPath": "Views\\Proveedor\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Details.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Details.cshtml",
       "TargetPath": "Views\\Articulo\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Edit.cshtml",
-      "TargetPath": "Views\\Articulo\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Home\\Privacy.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Edit.cshtml",
-      "TargetPath": "Views\\Proveedor\\Edit.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Details.cshtml",
+      "TargetPath": "Views\\Proveedor\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Delete.cshtml",
-      "TargetPath": "Views\\Proveedor\\Delete.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Create.cshtml",
+      "TargetPath": "Views\\Articulo\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Delete.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Delete.cshtml",
       "TargetPath": "Views\\Articulo\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Index.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Edit.cshtml",
+      "TargetPath": "Views\\Articulo\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Index.cshtml",
       "TargetPath": "Views\\Articulo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Create.cshtml",
+      "TargetPath": "Views\\Proveedor\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Details.cshtml",
-      "TargetPath": "Views\\Proveedor\\Details.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Delete.cshtml",
+      "TargetPath": "Views\\Proveedor\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Index.cshtml",
+      "TargetPath": "Views\\Proveedor\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Edit.cshtml",
+      "TargetPath": "Views\\Proveedor\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],
