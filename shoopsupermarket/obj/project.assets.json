@@ -8596,11 +8596,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
       "projectName": "shoopsupermarket",
-      "projectPath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
