@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1c7vzHhxFDRhjy3XPkF4ks00LP70CfIvCpyBUpE8lV5atxlxQDzzgnHyCqbiHQ0UmyAQKE+PnQYPN1hmc58Lzw==",
+  "dgSpecHash": "GGVKSZy3NgEOb1bqadR4y/wZQJxUyViMv1GCQQxHuruNFeUSDgMtNdJL4YOaet/HMfajvyqlpmTw7Aosu+1SWA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
