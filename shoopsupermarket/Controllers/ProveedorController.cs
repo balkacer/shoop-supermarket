@@ -20,9 +20,9 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Proveedor
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Proveedores.ToListAsync());
+            return View(new Proveedor());
         }
 
         // GET: Proveedor/Details/5
@@ -58,6 +58,11 @@ namespace shoopsupermarket.Controllers
         {
             if (ModelState.IsValid)
             {
+                proveedor.NAME = proveedor.NAME.ToUpper();
+                if(proveedor.PHONE2 == null)
+                {
+                    proveedor.PHONE2 = "N/A";
+                }
                 _context.Add(proveedor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -97,6 +102,10 @@ namespace shoopsupermarket.Controllers
             {
                 try
                 {
+                    if(proveedor.PHONE2 == null)
+                    {
+                        proveedor.PHONE2 = "N/A";
+                    }
                     _context.Update(proveedor);
                     await _context.SaveChangesAsync();
                 }

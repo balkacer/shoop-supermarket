@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using System.Text.RegularExpressions;
+using shoopsupermarket.Data;
 
 namespace shoopsupermarket.Models
 {
@@ -19,17 +21,26 @@ namespace shoopsupermarket.Models
         [Required(ErrorMessage = "¡Este campo es requerido")]
         public string NAME { get; set; }
 
-
         [Required(ErrorMessage = "¡Se requiere al menos un número de teléfono!")]
+        [Display(Name = "Telefono 1")]
+        [MaxLength(10, ErrorMessage = "Ponga numero de telefono sin guion"), 
+            MinLength(10, ErrorMessage = "Ponga numero de telefono sin guion")]
         [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "¡Número de teléfono no valido!")]
         public string PHONE1 { get; set; }
 
-
+        [Display(Name = "Telefono 2")]
+        [MaxLength(10, ErrorMessage = "Ponga numero de telefono sin guion"), 
+            MinLength(10, ErrorMessage = "Ponga numero de telefono sin guion")]
         [RegularExpression("^(?!0+$)(\\+\\d{1,3}[- ]?)?(?!0+$)\\d{10,15}$", ErrorMessage = "¡Número de teléfono no valido!")]
         public string PHONE2 { get; set; }
 
-        
         [ForeignKey("PROVRefId")]
         public ICollection<Articulo> Articulos { get; set; }
+
+        public List<Proveedor> Get(){
+            using(var db = new ApplicationDbContext()){
+                return db.Proveedores.ToList();
+            }
+        }
     }
 }

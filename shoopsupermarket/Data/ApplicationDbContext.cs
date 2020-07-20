@@ -13,6 +13,14 @@ namespace shoopsupermarket.Data
 
         }
 
+        public ApplicationDbContext(){
+            this.Database.EnsureCreated();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+            optionsBuilder.UseSqlite("DataSource=Database.db");
+        }
+
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Articulo> Articulos { get; set; }
     }
