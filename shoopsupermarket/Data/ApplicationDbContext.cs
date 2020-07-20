@@ -1,16 +1,17 @@
-using shoopsupermarket.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
+using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options){
-
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
+        {
         }
 
         public ApplicationDbContext(){
@@ -18,12 +19,10 @@ namespace shoopsupermarket.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlite("DataSource=Database.db");
+            optionsBuilder.UseSqlite("DataSource=app.db");
         }
 
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Articulo> Articulos { get; set; }
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Roles> Roles { get; set; }
     }
 }
