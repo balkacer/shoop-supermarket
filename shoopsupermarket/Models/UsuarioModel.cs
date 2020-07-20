@@ -35,6 +35,5 @@ namespace shoopsupermarket.Models
         [DataType(DataType.PhoneNumber)]
         [Display(Name = "Telefono")]
         public string TELEFONO { get; set; }
-
     }
 }
