@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {}
+    "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {
+    "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+        "projectUniqueName": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
         "projectName": "shoopsupermarket",
-        "projectPath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+        "projectPath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
         "packagesPath": "C:\\Users\\DELL PC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\",
+        "outputPath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
