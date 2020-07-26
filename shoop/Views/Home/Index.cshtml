@@ -1,8 +1,21 @@
-﻿@{
+﻿@model Articulo
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row justify-content-center">
+    @foreach (Articulo item in Model.Get())
+    {
+        <div class="col-4 d-inline-block">
+            <div class="card border-secondary" style="width: 18rem;">
+                <img src="@item.ImgUrl" class="card-img-top" alt="..." height="200">
+                <div class="card-body text-center">
+                    <h5 class="card-title">@item.DESC</h5>
+                    <h4 class="mb-3">$ @item.PRE_VENT.00</h4>
+                    <button class="btn btn-info float-left">Agregar al carrito</button>
+                    <a asp-controller="Home" asp-action="Pago" class="btn btn-primary float-right">Comprar</a>
+                </div>
+            </div>
+        </div>
+    }
 </div>

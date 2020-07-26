@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Net;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,6 +7,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using shoopsupermarket.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace shoopsupermarket.Controllers
 {
@@ -20,10 +22,11 @@ namespace shoopsupermarket.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new Articulo());
         }
 
-        public IActionResult Privacy()
+        [Authorize]
+        public IActionResult Pago()
         {
             return View();
         }

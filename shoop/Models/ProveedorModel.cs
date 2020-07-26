@@ -15,7 +15,6 @@ namespace shoopsupermarket.Models
         [Key]
         public int PROV_ID { get; set; }
 
-
         [MaxLength(50, ErrorMessage = "¡No más de 50 caracteres!")]
         [Display(Name = "Nombre")]
         [Required(ErrorMessage = "¡Este campo es requerido")]

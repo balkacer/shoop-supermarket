@@ -31,7 +31,8 @@ namespace shoopsupermarket.Data.Migrations
                     PRE_VENT = table.Column<double>(nullable: false),
                     STOCK = table.Column<int>(nullable: false),
                     PRE_COMP = table.Column<double>(nullable: false),
-                    PROVRefId = table.Column<int>(nullable: false)
+                    PROVRefId = table.Column<int>(nullable: false),
+                    ImgUrl = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {

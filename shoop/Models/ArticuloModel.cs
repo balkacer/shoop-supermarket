@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using shoopsupermarket.Data;
 
 namespace shoopsupermarket.Models
 {
@@ -32,12 +34,21 @@ namespace shoopsupermarket.Models
         [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
         public double PRE_COMP { get; set;}
-
         
         [Display(Name = "Proveedor")]
-        [Required (ErrorMessage = "¡Este campo es requerido")]
+        [Required (ErrorMessage = "¡Este campo es requerido!")]
         public int PROVRefId { get; set;}
         [Display(Name = "Proveedor")]
         public Proveedor PROV { get; set; }
+
+        [Required(ErrorMessage = "¡Este campo es requerido!")]
+        [Display(Name = "Direccion de la imagen")]
+        public string ImgUrl { get; set; }
+
+        public List<Articulo> Get(){
+            using(var db = new ApplicationDbContext()){
+                return db.Articulos.ToList();
+            }
+        }
     }
 }
