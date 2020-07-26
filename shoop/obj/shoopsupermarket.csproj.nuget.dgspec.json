@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {}
+    "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {}
   },
   "projects": {
-    "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {
+    "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
         "projectName": "shoopsupermarket",
-        "projectPath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\shoop-supermarket\\shoop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
