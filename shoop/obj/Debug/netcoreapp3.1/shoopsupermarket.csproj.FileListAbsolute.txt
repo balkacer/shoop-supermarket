@@ -523,6 +523,8 @@ C:\Users\user\Desktop\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Area
 C:\Users\user\Desktop\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Pago.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoop\bin\Debug\netcoreapp3.1\PayPal.dll
 >>>>>>> 548d80460ea04436f6acfa88b9477df21c74659a
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
@@ -563,3 +565,4 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoop\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+>>>>>>> c89d9c78f459afe7d37b298f18bab15084637470

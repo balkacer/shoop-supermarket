@@ -57,7 +57,7 @@ namespace shoopsupermarket.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROVRefId")] Articulo articulo)
+        public async Task<IActionResult> Create([Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,ImgUrl,PROVRefId")] Articulo articulo)
         {
             if (ModelState.IsValid)
             {
@@ -92,7 +92,7 @@ namespace shoopsupermarket.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROVRefId")] Articulo articulo)
+        public async Task<IActionResult> Edit(int id, [Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,ImgUrl,PROVRefId")] Articulo articulo)
         {
             if (id != articulo.ARTI_ID)
             {
