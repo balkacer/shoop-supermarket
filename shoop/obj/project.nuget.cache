@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0EmlR+wLh8CxXrz3cg1R5SDyf6HFAfo08VTvrFnez/h5dhAVaCvoCr0NBbnJf6XoQl6g0kEXHwr9b8SbnoBafA==",
+  "dgSpecHash": "xdSMzqam+42PQr6QZUogT+akO7juLPuNHHYzdZ1wAnMHk4rG04Yejs7Rtm8UZo/s1TvX2r/teLd6EYFfdv8Bnw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+  "projectFilePath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\DELL PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",
@@ -177,12 +177,5 @@
     "C:\\Users\\DELL PC\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\DELL PC\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

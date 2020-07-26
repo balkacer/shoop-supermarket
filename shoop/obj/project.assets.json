@@ -8962,11 +8962,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+      "projectUniqueName": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
       "projectName": "shoopsupermarket",
-      "projectPath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
+      "projectPath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\shoopsupermarket.csproj",
       "packagesPath": "C:\\Users\\DELL PC\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\",
+      "outputPath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -9041,13 +9041,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema al leer el archivo de caché c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoop\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
