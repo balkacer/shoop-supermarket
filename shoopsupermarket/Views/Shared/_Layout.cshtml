@@ -1,7 +1,5 @@
-﻿@* @model shoopsupermarket.Models.Categoria *@
-
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,7 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
+    <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                 <img src="~/logo.png" width="100" alt="Logo" class="d-inline-block align-middle mr-2">
@@ -25,10 +23,10 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Articulos" asp-action="Index">Articulos</a>
+                        <a class="nav-link text-dark" asp-controller="Articulos" asp-action="Index">Articulos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
+                        <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
@@ -44,8 +42,8 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="form-inline my-2 my-lg-0" style="width: 60%;">
+                    <input class="form-control mr-sm-2 w-75" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
                 <partial name="_LoginPartial" />
@@ -95,10 +93,3 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
-
-<style>
-    #carouselExampleControls{
-        height: 40vh;
-        overflow: hidden;
-    }
-</style>

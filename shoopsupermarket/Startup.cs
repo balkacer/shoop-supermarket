@@ -40,32 +40,23 @@ namespace shoopsupermarket
             services.AddControllersWithViews();
            services.AddRazorPages();
 
-           services.Configure<RequestLocalizationOptions>(options =>
-             {
-                 var supportedCultures = new[]
-                 {
-                    new CultureInfo("es-US"),
-                    new CultureInfo("en-US")
+            services.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+            //services.AddPortableObjectLocalization();
+
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new List<CultureInfo>
+                {
+                    new CultureInfo("en-US"),
+                    new CultureInfo("en"),
+                    new CultureInfo("es-MX"),
                 };
-                options.DefaultRequestCulture = new RequestCulture(culture: "es-US", uiCulture: "es-US");
+
+                options.DefaultRequestCulture = new RequestCulture("es-MX");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
-
-                var defaultCookieRequestProvider =
-                    options.RequestCultureProviders.FirstOrDefault(rcp =>
-                        rcp.GetType() == typeof(CookieRequestCultureProvider));
-                if (defaultCookieRequestProvider != null)
-                    options.RequestCultureProviders.Remove(defaultCookieRequestProvider);
-
-                options.RequestCultureProviders.Insert(0,
-                    new CookieRequestCultureProvider()
-                    {
-                        CookieName = ".AspNetCore.Culture",
-                        Options = options
-                    });
             });
-
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,6 +83,8 @@ namespace shoopsupermarket
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseRequestLocalization();
 
             app.UseEndpoints(endpoints =>
             {
