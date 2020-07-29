@@ -9,8 +9,7 @@ namespace shoopsupermarket.Models
 {
     public class Articulo
     {
-        [Key]
-        public int ARTI_ID { get; set;}
+        public int ID { get; set;}
 
 
         [MaxLength(50, ErrorMessage = "¡No más de 50  caracteres!")]
@@ -37,13 +36,20 @@ namespace shoopsupermarket.Models
         
         [Display(Name = "Proveedor")]
         [Required (ErrorMessage = "¡Este campo es requerido!")]
-        public int PROVRefId { get; set;}
+        public int PROV_ID { get; set;}
         [Display(Name = "Proveedor")]
         public Proveedor PROV { get; set; }
 
+        [Display(Name = "Categoria")]
+        [Required (ErrorMessage = "¡Este campo es requerido!")]
+        public int CAT_ID { get; set;}
+        [Display(Name = "Categoria")]
+        public Categoria CAT { get; set; }
+
         [Required(ErrorMessage = "¡Este campo es requerido!")]
         [Display(Name = "Direccion de la imagen")]
-        public string ImgUrl { get; set; }
+        [DataType(DataType.Url)]
+        public string IMG { get; set; }
 
         public List<Articulo> Get(){
             using(var db = new ApplicationDbContext()){

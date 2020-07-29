@@ -20541,13 +20541,18 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Details.cshtml",
-      "TargetPath": "Views\\Articulo\\Details.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Categorias\\Index.cshtml",
+      "TargetPath": "Views\\Categorias\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\EnableAuthenticator.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Categorias\\Create.cshtml",
+      "TargetPath": "Views\\Categorias\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20558,6 +20563,11 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\GenerateRecoveryCodes.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Categorias\\Edit.cshtml",
+      "TargetPath": "Views\\Categorias\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20596,8 +20606,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Create.cshtml",
-      "TargetPath": "Views\\Articulo\\Create.cshtml",
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Categorias\\Delete.cshtml",
+      "TargetPath": "Views\\Categorias\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20613,16 +20623,6 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Delete.cshtml",
-      "TargetPath": "Views\\Articulo\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Edit.cshtml",
-      "TargetPath": "Views\\Articulo\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20716,11 +20716,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Index.cshtml",
-      "TargetPath": "Views\\Articulo\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "FileKind": "mvc"
@@ -20728,6 +20723,11 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Index.cshtml",
+      "TargetPath": "Views\\Articulos\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20766,6 +20766,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Categorias\\Details.cshtml",
+      "TargetPath": "Views\\Categorias\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
       "FileKind": "mvc"
@@ -20786,6 +20791,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Details.cshtml",
+      "TargetPath": "Views\\Articulos\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\_StatusMessage.cshtml",
       "FileKind": "mvc"
@@ -20793,6 +20803,11 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Delete.cshtml",
       "TargetPath": "Views\\Proveedor\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Delete.cshtml",
+      "TargetPath": "Views\\Articulos\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20813,6 +20828,16 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Edit.cshtml",
       "TargetPath": "Views\\Proveedor\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Create.cshtml",
+      "TargetPath": "Views\\Articulos\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Edit.cshtml",
+      "TargetPath": "Views\\Articulos\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],

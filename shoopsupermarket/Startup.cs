@@ -12,6 +12,10 @@ using shoopsupermarket.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace shoopsupermarket
 {
@@ -28,12 +32,40 @@ namespace shoopsupermarket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(
+                options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+                    
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
            services.AddRazorPages();
+
+           services.Configure<RequestLocalizationOptions>(options =>
+             {
+                 var supportedCultures = new[]
+                 {
+                    new CultureInfo("es-US"),
+                    new CultureInfo("en-US")
+                };
+                options.DefaultRequestCulture = new RequestCulture(culture: "es-US", uiCulture: "es-US");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+
+                var defaultCookieRequestProvider =
+                    options.RequestCultureProviders.FirstOrDefault(rcp =>
+                        rcp.GetType() == typeof(CookieRequestCultureProvider));
+                if (defaultCookieRequestProvider != null)
+                    options.RequestCultureProviders.Remove(defaultCookieRequestProvider);
+
+                options.RequestCultureProviders.Insert(0,
+                    new CookieRequestCultureProvider()
+                    {
+                        CookieName = ".AspNetCore.Culture",
+                        Options = options
+                    });
+            });
+
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +86,9 @@ namespace shoopsupermarket
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
 
             app.UseAuthentication();
             app.UseAuthorization();

@@ -10,23 +10,23 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    public class ArticuloController : Controller
+    public class ArticulosController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ArticuloController(ApplicationDbContext context)
+        public ArticulosController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Articulo
+        // GET: Articulos
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Articulos.Include(a => a.PROV);
+            var applicationDbContext = _context.Articulos.Include(a => a.CAT).Include(a => a.PROV);
             return View(await applicationDbContext.ToListAsync());
         }
 
-        // GET: Articulo/Details/5
+        // GET: Articulos/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -35,8 +35,9 @@ namespace shoopsupermarket.Controllers
             }
 
             var articulo = await _context.Articulos
+                .Include(a => a.CAT)
                 .Include(a => a.PROV)
-                .FirstOrDefaultAsync(m => m.ARTI_ID == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (articulo == null)
             {
                 return NotFound();
@@ -45,19 +46,20 @@ namespace shoopsupermarket.Controllers
             return View(articulo);
         }
 
-        // GET: Articulo/Create
+        // GET: Articulos/Create
         public IActionResult Create()
         {
-            ViewData["PROVRefId"] = new SelectList(_context.Proveedores, "PROV_ID", "NAME");
+            ViewData["CAT_ID"] = new SelectList(_context.Categorias, "ID", "CAT");
+            ViewData["PROV_ID"] = new SelectList(_context.Proveedores, "ID", "NAME");
             return View();
         }
 
-        // POST: Articulo/Create
+        // POST: Articulos/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,ImgUrl,PROVRefId")] Articulo articulo)
+        public async Task<IActionResult> Create([Bind("ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROV_ID,CAT_ID,IMG")] Articulo articulo)
         {
             if (ModelState.IsValid)
             {
@@ -66,11 +68,12 @@ namespace shoopsupermarket.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PROVRefId"] = new SelectList(_context.Proveedores, "PROV_ID", "NAME", articulo.PROVRefId);
+            ViewData["CAT_ID"] = new SelectList(_context.Categorias, "ID", "CAT", articulo.CAT_ID);
+            ViewData["PROV_ID"] = new SelectList(_context.Proveedores, "ID", "NAME", articulo.PROV_ID);
             return View(articulo);
         }
 
-        // GET: Articulo/Edit/5
+        // GET: Articulos/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -83,18 +86,19 @@ namespace shoopsupermarket.Controllers
             {
                 return NotFound();
             }
-            ViewData["PROVRefId"] = new SelectList(_context.Proveedores, "PROV_ID", "NAME", articulo.PROVRefId);
+            ViewData["CAT_ID"] = new SelectList(_context.Categorias, "ID", "CAT", articulo.CAT_ID);
+            ViewData["PROV_ID"] = new SelectList(_context.Proveedores, "ID", "NAME", articulo.PROV_ID);
             return View(articulo);
         }
 
-        // POST: Articulo/Edit/5
+        // POST: Articulos/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ARTI_ID,DESC,PRE_VENT,STOCK,PRE_COMP,ImgUrl,PROVRefId")] Articulo articulo)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROV_ID,CAT_ID,IMG")] Articulo articulo)
         {
-            if (id != articulo.ARTI_ID)
+            if (id != articulo.ID)
             {
                 return NotFound();
             }
@@ -109,7 +113,7 @@ namespace shoopsupermarket.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ArticuloExists(articulo.ARTI_ID))
+                    if (!ArticuloExists(articulo.ID))
                     {
                         return NotFound();
                     }
@@ -120,11 +124,12 @@ namespace shoopsupermarket.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["PROVRefId"] = new SelectList(_context.Proveedores, "PROV_ID", "NAME", articulo.PROVRefId);
+            ViewData["CAT_ID"] = new SelectList(_context.Categorias, "ID", "CAT", articulo.CAT_ID);
+            ViewData["PROV_ID"] = new SelectList(_context.Proveedores, "ID", "NAME", articulo.PROV_ID);
             return View(articulo);
         }
 
-        // GET: Articulo/Delete/5
+        // GET: Articulos/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,8 +138,9 @@ namespace shoopsupermarket.Controllers
             }
 
             var articulo = await _context.Articulos
+                .Include(a => a.CAT)
                 .Include(a => a.PROV)
-                .FirstOrDefaultAsync(m => m.ARTI_ID == id);
+                .FirstOrDefaultAsync(m => m.ID == id);
             if (articulo == null)
             {
                 return NotFound();
@@ -143,7 +149,7 @@ namespace shoopsupermarket.Controllers
             return View(articulo);
         }
 
-        // POST: Articulo/Delete/5
+        // POST: Articulos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -156,7 +162,7 @@ namespace shoopsupermarket.Controllers
 
         private bool ArticuloExists(int id)
         {
-            return _context.Articulos.Any(e => e.ARTI_ID == id);
+            return _context.Articulos.Any(e => e.ID == id);
         }
     }
 }

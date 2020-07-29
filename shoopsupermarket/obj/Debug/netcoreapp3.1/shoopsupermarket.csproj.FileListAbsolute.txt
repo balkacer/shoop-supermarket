@@ -75,11 +75,6 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\shoopsupermarket.TagHelpers.output.cache
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\shoopsupermarket.RazorCoreGenerate.cache
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulo\Create.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulo\Delete.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulo\Details.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulo\Edit.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulo\Index.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Proveedor\Create.cshtml.g.cs
@@ -695,3 +690,15 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Home\Pago.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.dll
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulos\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulos\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulos\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulos\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Articulos\Index.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Index.cshtml.g.cs

@@ -7,9 +7,9 @@
     <div class="row" style="margin-top: 1vh;">
         @foreach (Articulo item in Model.Get())
         {
-        <a asp-controller="Articulo" asp-action="Details" asp-route-id="@item.ARTI_ID">
+        <a asp-controller="Articulos" asp-action="Details" asp-route-id="@item.ID">
             <div class="card prod" style="height: 38.7vh; width: 30vh; margin: 1.8vh;">
-                <img class="card-img-top" src="@item.ImgUrl" alt="@item.DESC" style="height: 18vh; width: 18vh; margin: auto; margin-top: 1vh;">
+                <img class="card-img-top" src="@item.IMG" alt="@item.DESC" style="height: 18vh; width: 18vh; margin: auto; margin-top: 1vh;">
                 <div class="card-body">
                     <h5 class="card-title text-capitalize">@Html.DisplayFor(modelItem => item.DESC)</h5>                    
                 </div>
