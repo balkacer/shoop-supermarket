@@ -12,9 +12,10 @@ using shoopsupermarket.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Mvc.Razor;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace shoopsupermarket
 {
@@ -31,8 +32,9 @@ namespace shoopsupermarket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(
+                options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
+                    
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
@@ -40,7 +42,7 @@ namespace shoopsupermarket
 
             services.AddMvc()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
-            services.AddPortableObjectLocalization();
+            //services.AddPortableObjectLocalization();
 
             services.Configure<RequestLocalizationOptions>(options =>
             {
@@ -75,6 +77,9 @@ namespace shoopsupermarket
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(options.Value);
 
             app.UseAuthentication();
             app.UseAuthorization();

@@ -27,6 +27,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.PROV)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CAT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IMG)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -49,9 +55,15 @@
                 @Html.DisplayFor(modelItem => item.PROV.NAME)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ARTI_ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ARTI_ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ARTI_ID">Delete</a>
+                @Html.DisplayFor(modelItem => item.CAT.CAT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IMG)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }

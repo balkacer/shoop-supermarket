@@ -11,8 +11,8 @@
         {
             <div class="col-md-3">
                 <div class="card prod mb-4">
-                    <a asp-controller="Articulo" asp-action="Details" asp-route-id="@item.ARTI_ID">
-                        <img class="card-img-top" src="@item.ImgUrl" alt="@item.DESC" height="auto">
+                    <a asp-controller="Articulo" asp-action="Details" asp-route-id="@item.ID">
+                        <img class="card-img-top" src="@item.IMG" alt="@item.DESC" height="auto">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.DESC)</h5> 

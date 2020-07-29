@@ -10,22 +10,22 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    public class ProveedorController : Controller
+    public class CategoriasController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ProveedorController(ApplicationDbContext context)
+        public CategoriasController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Proveedor
-        public IActionResult Index()
+        // GET: Categorias
+        public async Task<IActionResult> Index()
         {
-            return View(new Proveedor());
+            return View(await _context.Categorias.ToListAsync());
         }
 
-        // GET: Proveedor/Details/5
+        // GET: Categorias/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,44 +33,39 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedores
+            var categoria = await _context.Categorias
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (proveedor == null)
+            if (categoria == null)
             {
                 return NotFound();
             }
 
-            return View(proveedor);
+            return View(categoria);
         }
 
-        // GET: Proveedor/Create
+        // GET: Categorias/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Proveedor/Create
+        // POST: Categorias/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,NAME,PHONE1,PHONE2")] Proveedor proveedor)
+        public async Task<IActionResult> Create([Bind("ID,CAT")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
-                proveedor.NAME = proveedor.NAME.ToUpper();
-                if(proveedor.PHONE2 == null)
-                {
-                    proveedor.PHONE2 = "N/A";
-                }
-                _context.Add(proveedor);
+                _context.Add(categoria);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(proveedor);
+            return View(categoria);
         }
 
-        // GET: Proveedor/Edit/5
+        // GET: Categorias/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -78,22 +73,22 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedores.FindAsync(id);
-            if (proveedor == null)
+            var categoria = await _context.Categorias.FindAsync(id);
+            if (categoria == null)
             {
                 return NotFound();
             }
-            return View(proveedor);
+            return View(categoria);
         }
 
-        // POST: Proveedor/Edit/5
+        // POST: Categorias/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,NAME,PHONE1,PHONE2")] Proveedor proveedor)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,CAT")] Categoria categoria)
         {
-            if (id != proveedor.ID)
+            if (id != categoria.ID)
             {
                 return NotFound();
             }
@@ -102,17 +97,12 @@ namespace shoopsupermarket.Controllers
             {
                 try
                 {
-                    if(proveedor.PHONE2 == null)
-                    {
-                        proveedor.PHONE2 = "N/A";
-                    }
-                    proveedor.NAME = proveedor.NAME.ToUpper();
-                    _context.Update(proveedor);
+                    _context.Update(categoria);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProveedorExists(proveedor.ID))
+                    if (!CategoriaExists(categoria.ID))
                     {
                         return NotFound();
                     }
@@ -123,10 +113,10 @@ namespace shoopsupermarket.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(proveedor);
+            return View(categoria);
         }
 
-        // GET: Proveedor/Delete/5
+        // GET: Categorias/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,30 +124,30 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var proveedor = await _context.Proveedores
+            var categoria = await _context.Categorias
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (proveedor == null)
+            if (categoria == null)
             {
                 return NotFound();
             }
 
-            return View(proveedor);
+            return View(categoria);
         }
 
-        // POST: Proveedor/Delete/5
+        // POST: Categorias/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var proveedor = await _context.Proveedores.FindAsync(id);
-            _context.Proveedores.Remove(proveedor);
+            var categoria = await _context.Categorias.FindAsync(id);
+            _context.Categorias.Remove(categoria);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProveedorExists(int id)
+        private bool CategoriaExists(int id)
         {
-            return _context.Proveedores.Any(e => e.ID == id);
+            return _context.Categorias.Any(e => e.ID == id);
         }
     }
 }

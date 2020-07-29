@@ -14,15 +14,17 @@ namespace shoopsupermarket.Data
         {
         }
 
-        public ApplicationDbContext(){
+        public ApplicationDbContext()
+        {
             this.Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlite("DataSource=app.db");
+            optionsBuilder.UseSqlServer("Server=LAPTOP-9IB9T0EQ\\MYSERVER;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Articulo> Articulos { get; set; }
+        public DbSet<Categoria> Categorias { get; set; }
     }
 }

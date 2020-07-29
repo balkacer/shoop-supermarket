@@ -23,22 +23,22 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-controller="Articulo" asp-action="Index">Articulos</a>
+                        <a class="nav-link text-dark" asp-controller="Articulos" asp-action="Index">Articulos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
                     </li>
-                    <li class="nav-item btn-group">
-                        <a asp-controller="Articulo" asp-action="Index" class="nav-link text-dark">Articulos</a>
-                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split" aria-pressed="false" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach (Categoria cat in Categoria.Get()){
+                                <a class="dropdown-item" href="#">@cat.CAT</a>
+                            }
                         </div>
                     </li>
                 </ul>
