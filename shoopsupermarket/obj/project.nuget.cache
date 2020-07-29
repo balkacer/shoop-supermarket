@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7Z89wumn8XjRvSTDqY1ul+NJlFE3osHiJyQcPLUuqwgCCok7xeckvyB71q0RGtkSghesMiO+XBU0BWOYb/EKlg==",
+  "dgSpecHash": "FL3IZxQCcBuALq/6OTc0N8aNxxjlESNpB0bZL9SPImYRQ/7w+MkniRfB8iLAJrU1QseW5hOJFbAL4c/WnFZPAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
+  "projectFilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\shoopsupermarket.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.4\\microsoft.aspnetcore.cryptography.internal.3.1.4.nupkg.sha512",
     "C:\\Users\\DELL PC\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.4\\microsoft.aspnetcore.cryptography.keyderivation.3.1.4.nupkg.sha512",
