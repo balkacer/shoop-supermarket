@@ -2,7 +2,6 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\shoopsupermarket.StaticWebAssets.xml
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\app.db
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\shoopsupermarket.exe
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\shoopsupermarket.deps.json
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\shoopsupermarket.runtimeconfig.json
