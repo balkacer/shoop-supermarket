@@ -1,0 +1,29 @@
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    string caracter = UserManager.GetUserName(User);
+    caracter = caracter.Substring(0,caracter.IndexOf("@"));
+
+    <li class="nav-item">
+        <a>
+            <img src="~/icons8-carrito-de-compras-48.png" alt="">
+        </a>
+    </li>
+    <li class="nav-item">
+        <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+            <img src="~/icons8-usuario-50.png" alt="">
+        </a>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Iniciar sesion</a>
+    </li>
+}
+</ul>
