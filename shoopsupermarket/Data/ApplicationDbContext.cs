@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -26,5 +26,6 @@ namespace shoopsupermarket.Data
         public DbSet<Proveedor> Proveedores { get; set; }
         public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<SliderConfiguracion> SliderConfiguracion { get; set; }
     }
 }

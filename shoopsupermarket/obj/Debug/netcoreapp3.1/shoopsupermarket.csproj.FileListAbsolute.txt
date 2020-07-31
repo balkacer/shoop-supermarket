@@ -939,3 +939,8 @@ C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Categorias\Index.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.dll
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Index.cshtml.g.cs

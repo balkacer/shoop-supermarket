@@ -11,6 +11,7 @@ a{
 #carouselExampleControls{
     height: 40vh !important;
     overflow: hidden !important;
+    
 }
 
 .btn:focus{
