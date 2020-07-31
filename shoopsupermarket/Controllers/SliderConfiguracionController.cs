@@ -1,3 +1,4 @@
+using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using shoopsupermarket.Data;
 using shoopsupermarket.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace shoopsupermarket.Controllers
 {
+    [Authorize(Roles="Admin")]
     public class SliderConfiguracionController : Controller
     {
         private readonly ApplicationDbContext _context;
