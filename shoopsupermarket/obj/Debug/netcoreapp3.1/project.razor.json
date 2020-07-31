@@ -20531,11 +20531,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Create.cshtml",
-      "TargetPath": "Views\\Articulo\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Details.cshtml",
       "TargetPath": "Views\\Articulos\\Details.cshtml",
       "FileKind": "mvc"
@@ -20671,16 +20666,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Details.cshtml",
-      "TargetPath": "Views\\Articulo\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Edit.cshtml",
-      "TargetPath": "Views\\Articulo\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20801,11 +20786,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Delete.cshtml",
-      "TargetPath": "Views\\Articulo\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Error.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Error.cshtml",
       "FileKind": "mvc"
@@ -20818,11 +20798,6 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulo\\Index.cshtml",
-      "TargetPath": "Views\\Articulo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
