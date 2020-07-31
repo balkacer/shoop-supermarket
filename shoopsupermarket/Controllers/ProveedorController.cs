@@ -11,7 +11,7 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    [Authorize(Roles="Admin")]
+    //[Authorize(Roles="Admin")]
     public class ProveedorController : Controller
     {
         private readonly ApplicationDbContext _context;

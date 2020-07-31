@@ -20816,6 +20816,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Carrito\\Index.cshtml",
+      "TargetPath": "Views\\Carrito\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Details.cshtml",
       "TargetPath": "Views\\Articulos\\Details.cshtml",
       "FileKind": "mvc"

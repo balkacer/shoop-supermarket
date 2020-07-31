@@ -54,8 +54,14 @@ namespace shoopsupermarket.Models
         [Display(Name = "Dirección de Imagen")]
         public string IMG
         {
-            get { return _IMG; }
+            get { return _IMG = Articulo.GetById(ART_ID).IMG; }
             set { _IMG = value; }
+        }
+
+        public static List<ArticulosOrden> Get(){
+            using(var db = new ApplicationDbContext()){
+                return db.ArticulosOrdenes.ToList();
+            }
         }
     }
 }

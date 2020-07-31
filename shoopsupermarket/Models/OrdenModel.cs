@@ -18,6 +18,7 @@ namespace shoopsupermarket.Models
         public decimal LONG { get; set; }
         public decimal LAT { get; set; }
         public string COMENT { get; set; }
+        public ICollection<ArticulosOrden> ArticulosOrden {get;set;}
 
         [Display(Name = "Fecha de orden")]
         [DataType(DataType.DateTime)]

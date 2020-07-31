@@ -11,7 +11,7 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    [Authorize(Roles="Admin")]
+    //[Authorize(Roles="Admin")]
     public class ArticulosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -22,6 +22,7 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Articulos
+        [Route("Admin/{controller}")]
         public async Task<IActionResult> Index()
         {
             var applicationDbContext = _context.Articulos.Include(a => a.CAT).Include(a => a.PROV);
@@ -29,6 +30,7 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Articulos/Details/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -49,6 +51,7 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Articulos/Create
+        [Route("Admin/{controller}/{action}")]
         public IActionResult Create()
         {
             ViewData["CAT_ID"] = new SelectList(_context.Categorias, "ID", "CAT");
@@ -61,6 +64,7 @@ namespace shoopsupermarket.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("Admin/{controller}/{action}")]
         public async Task<IActionResult> Create([Bind("ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROV_ID,CAT_ID,IMG")] Articulo articulo)
         {
             if (ModelState.IsValid)
@@ -76,6 +80,7 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Articulos/Edit/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -98,6 +103,7 @@ namespace shoopsupermarket.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Edit(int id, [Bind("ID,DESC,PRE_VENT,STOCK,PRE_COMP,PROV_ID,CAT_ID,IMG")] Articulo articulo)
         {
             if (id != articulo.ID)
@@ -132,6 +138,7 @@ namespace shoopsupermarket.Controllers
         }
 
         // GET: Articulos/Delete/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -154,6 +161,7 @@ namespace shoopsupermarket.Controllers
         // POST: Articulos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var articulo = await _context.Articulos.FindAsync(id);
