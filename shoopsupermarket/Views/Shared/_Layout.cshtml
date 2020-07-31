@@ -28,13 +28,13 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categorias
+                    <li class="nav-item btn-group">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">
+                            Categorias
                         </a>
+                        <button type="button" class="btn dropdown-toggle dropdown-toggle-split pl-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach (Categoria cat in Categoria.Get()){
                                 <a class="dropdown-item" href="#">@cat.CAT</a>

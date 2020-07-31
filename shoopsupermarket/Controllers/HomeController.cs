@@ -9,6 +9,8 @@ using Microsoft.Extensions.Logging;
 using shoopsupermarket.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Routing;
+using System.Configuration;
+using Stripe;
 
 namespace shoopsupermarket.Controllers
 {
@@ -25,13 +27,6 @@ namespace shoopsupermarket.Controllers
         {
             return View(new Articulo());
         }
-
-        [Authorize]
-        public IActionResult Pago()
-        {
-            return View();
-        }
-
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

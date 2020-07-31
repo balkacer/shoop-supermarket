@@ -56,5 +56,7 @@ namespace shoopsupermarket.Models
                 return db.Articulos.ToList();
             }
         }
+
+        
     }
 }

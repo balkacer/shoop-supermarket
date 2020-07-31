@@ -16,6 +16,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Stripe;
 
 namespace shoopsupermarket
 {
@@ -62,6 +63,8 @@ namespace shoopsupermarket
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            StripeConfiguration.ApiKey = "sk_test_51HAmjTDeFU75Q4GnHtJZKBfKpHBbMrpzdpImMYDXWl9A2sHOItIUeEbJcLwFKGq04NhknQiOsHgpzptD4zuipXFK00Ds6cFC0K";
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

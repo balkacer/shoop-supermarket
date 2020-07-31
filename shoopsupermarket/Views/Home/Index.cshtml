@@ -5,25 +5,25 @@
 
 <link rel="stylesheet" href="~/css/Home.css">
 
-<div class="container text-center">
-    <div class="row justify-content-center mt-4">
-        @foreach (Articulo item in Model.Get())
-        {
-            <div class="col-md-3">
-                <div class="card prod mb-4">
-                    <a asp-controller="Articulo" asp-action="Details" asp-route-id="@item.ID">
-                        <img class="card-img-top" src="@item.IMG" alt="@item.DESC" height="auto">
-                    </a>
-                    <div class="card-body">
-                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.DESC)</h5> 
-                        <span class="float-left badge p-2 badge-success">@Html.DisplayFor(modelItem => item.PRE_VENT)</span>
-                        
-                        <input type="number" class="form-control float-left" value="1" min="1">
-                        <a asp-controller="Home" asp-action="Pago" class="btn btn-primary float-right" style="width: 70%;">Agregar</a>             
-                    </div>
+
+<div class="row justify-content-center mt-4">
+    @foreach (Articulo item in Model.Get())
+    {
+        <div class="col-md-3">
+            <div class="card prod mb-4">
+                <a asp-controller="Articulo" asp-action="Details" asp-route-id="@item.ID">
+                    <img class="card-img-top" src="@item.IMG" alt="@item.DESC" height="auto">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.DESC)</h5> 
+                    <span class="float-left badge p-2 badge-success">@Html.DisplayFor(modelItem => item.PRE_VENT)</span>
+                    
+                    <input type="number" class="form-control float-left" value="1" min="1">
+                    <a asp-controller="Stripe" asp-action="Index" class="btn btn-primary float-right" style="width: 70%;">Agregar</a>             
                 </div>
             </div>
-        }
-    </div>
+        </div>
+    }
 </div>
+
 
