@@ -13,8 +13,9 @@ namespace shoopsupermarket.Data
         public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<SliderConfiguracion> SliderConfiguracion { get; set; }
-        public DbSet<Orden> Ordenes { get; set; }
-        public DbSet<ArticulosOrden> ArticulosOrdenes { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<DetallePedido> DetallePedidos { get; set; }
+        public DbSet<Estado> Estados { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -32,7 +33,7 @@ namespace shoopsupermarket.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ArticulosOrden>().HasKey(o => new { o.ORD_ID, o.ART_ID });
+            modelBuilder.Entity<DetallePedido>().HasKey(o => new { o.ORD_ID, o.ART_ID });
             base.OnModelCreating(modelBuilder);
         }
     }

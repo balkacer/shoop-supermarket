@@ -7,7 +7,7 @@ using shoopsupermarket.Data;
 
 namespace shoopsupermarket.Models
 {
-    public class ArticulosOrden
+    public class DetallePedido
     {
         [Key, Column(Order = 0)]
         public int ORD_ID { get; set; }
@@ -16,9 +16,9 @@ namespace shoopsupermarket.Models
         private string _DESC;
         private int _CANT;
         private double _PRE_UNIT;
-        private string _IMG;                
+        private string _IMG;     
         
-        public virtual Orden Orden { get; set; }
+        public virtual Pedido Pedido { get; set; }
         public virtual Articulo Articulo { get; set; }
 
         [Display(Name = "Descripción")]
@@ -34,7 +34,7 @@ namespace shoopsupermarket.Models
             set
             {
                 _CANT = value;
-                Articulo.UpdateStock(ART_ID, _CANT);
+                //Articulo.UpdateStock(ART_ID, _CANT);
             } 
         }
 
@@ -58,9 +58,9 @@ namespace shoopsupermarket.Models
             set { _IMG = value; }
         }
 
-        public static List<ArticulosOrden> Get(){
+        public static List<DetallePedido> Get(){
             using(var db = new ApplicationDbContext()){
-                return db.ArticulosOrdenes.ToList();
+                return db.DetallePedidos.ToList();
             }
         }
     }
