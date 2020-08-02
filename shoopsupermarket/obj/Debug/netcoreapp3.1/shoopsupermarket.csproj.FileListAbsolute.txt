@@ -941,3 +941,17 @@ C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Stripe.dll
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\bin\Debug\netcoreapp3.1\Stripe.net.dll
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Stripe\Index.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Index.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Carrito\Index.cshtml.g.cs
+>>>>>>> 9e6737501d25c45aa025ad4e30d6e70bee0d7976
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Carrito\Index.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Create.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Delete.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Details.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Edit.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Index.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Home\Search.cshtml.g.cs

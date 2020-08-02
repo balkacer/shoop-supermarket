@@ -24,16 +24,17 @@ namespace shoopsupermarket.Controllers
         [HttpPost]
         public IActionResult Index(PaymentIntentCreateRequest request)
         {
+            var json = new Dictionary<string, string>
+            {
+                {"", ""},
+                {"", ""},
+            };
+
             var paymentIntents = new PaymentIntentService();
             var paymentIntent = paymentIntents.Create(new PaymentIntentCreateOptions
             {
                 Amount = CalculateOrderAmount(request.Items),
                 Currency = "usd",
-                Metadata = new Dictionary<string, string>
-                {
-                    {"Manzana", "$10"} 
-                    
-                },
                 ReceiptEmail = "medranomendezalex@gmail.com",
             });
 

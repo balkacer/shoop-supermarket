@@ -257,6 +257,54 @@ namespace shoopsupermarket.Migrations
                     b.HasIndex("PROV_ID");
 
                     b.ToTable("Articulos");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 2,
+                            CAT_ID = 1,
+                            DESC = "Jugo de Manzana",
+                            IMG = "https://res.cloudinary.com/almacendo/image/upload/v1569273056/Jugos/Jugo-Santal-Sabor-Manzana_-200ml-Caja-_24-uds_-Turn.jpg",
+                            PRE_COMP = 15.0,
+                            PRE_VENT = 15.0,
+                            PROV_ID = 1,
+                            STOCK = 20
+                        });
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.ArticulosOrden", b =>
+                {
+                    b.Property<int>("ORD_ID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ART_ID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ArticuloID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CANT")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DESC")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IMG")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OrdenID")
+                        .HasColumnType("int");
+
+                    b.Property<double>("PRE_UNIT")
+                        .HasColumnType("float");
+
+                    b.HasKey("ORD_ID", "ART_ID");
+
+                    b.HasIndex("ArticuloID");
+
+                    b.HasIndex("OrdenID");
+
+                    b.ToTable("ArticulosOrdenes");
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.Categoria", b =>
@@ -272,6 +320,49 @@ namespace shoopsupermarket.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Categorias");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 2,
+                            CAT = "Comida"
+                        });
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.Orden", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CLIENTE")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CLI_ID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("COMENT")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ESTADO")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FECH_ORD")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("LAT")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("LONG")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("NOM_CLI")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Ordenes");
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.Proveedor", b =>
@@ -298,6 +389,30 @@ namespace shoopsupermarket.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Proveedores");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 2,
+                            NAME = "Santal",
+                            PHONE1 = "8297576437"
+                        });
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.SliderConfiguracion", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CONT")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("SliderConfiguracion");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -364,6 +479,17 @@ namespace shoopsupermarket.Migrations
                         .HasForeignKey("PROV_ID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.ArticulosOrden", b =>
+                {
+                    b.HasOne("shoopsupermarket.Models.Articulo", "Articulo")
+                        .WithMany()
+                        .HasForeignKey("ArticuloID");
+
+                    b.HasOne("shoopsupermarket.Models.Orden", "Orden")
+                        .WithMany("ArticulosOrden")
+                        .HasForeignKey("OrdenID");
                 });
 #pragma warning restore 612, 618
         }

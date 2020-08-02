@@ -293,5 +293,7 @@ namespace shoopsupermarket.Migrations
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
         }
+
+        
     }
 }
