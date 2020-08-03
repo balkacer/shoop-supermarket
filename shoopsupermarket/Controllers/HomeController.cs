@@ -52,15 +52,7 @@ namespace shoopsupermarket.Controllers
 
             if (!String.IsNullOrEmpty(c))
             {
-                if(c == "Bebida")
-                {
-                    articulos = articulos.Where(s => s.CAT_ID == PassId);
-                } 
-                    
-                else if(c == "Comida")
-                {
-                    articulos = articulos.Where(s => s.CAT_ID == PassId);
-                }
+                articulos = articulos.Where(s => s.CAT_ID == PassId);
             }
 
             if (!String.IsNullOrEmpty(q))
