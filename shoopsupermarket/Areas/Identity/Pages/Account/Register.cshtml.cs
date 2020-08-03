@@ -44,7 +44,7 @@ namespace shoopsupermarket.Areas.Identity.Pages.Account
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         public class InputModel
-        {
+        {   
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]

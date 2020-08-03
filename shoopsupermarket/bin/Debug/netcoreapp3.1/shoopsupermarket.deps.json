@@ -32,7 +32,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "3.1.5",
           "Microsoft.Extensions.Localization": "3.1.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
-          "PayPal": "1.9.1",
+          "Stripe": "1.12.0",
+          "Stripe.net": "37.27.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -1325,18 +1326,15 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
-      "PayPal/1.9.1": {
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
+      "RestSharp/105.0.1": {
         "runtime": {
-          "lib/net451/PayPal.dll": {
-            "assemblyVersion": "1.9.1.0",
-            "fileVersion": "1.9.1.0"
+          "lib/net4/RestSharp.dll": {
+            "assemblyVersion": "105.0.1.0",
+            "fileVersion": "105.0.1.0"
           }
         },
         "compile": {
-          "lib/net451/PayPal.dll": {}
+          "lib/net4/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1532,6 +1530,36 @@
         },
         "compile": {
           "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "Stripe/1.12.0": {
+        "dependencies": {
+          "RestSharp": "105.0.1"
+        },
+        "runtime": {
+          "lib/net40/Stripe.dll": {
+            "assemblyVersion": "1.12.0.0",
+            "fileVersion": "1.12.0.0"
+          }
+        },
+        "compile": {
+          "lib/net40/Stripe.dll": {}
+        }
+      },
+      "Stripe.net/37.27.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "Newtonsoft.Json": "12.0.2",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Stripe.net.dll": {
+            "assemblyVersion": "37.27.0.0",
+            "fileVersion": "37.27.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Stripe.net.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -1770,6 +1798,9 @@
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.6.26515.6"
           }
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
         }
       },
       "System.Console/4.3.0": {
@@ -4505,12 +4536,12 @@
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
     },
-    "PayPal/1.9.1": {
+    "RestSharp/105.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-b3vq6Lc9CwSooCX2tsZ02zb7E/K/cA6EILCoMynue+ZeVuitJNqt0YwxPnp7uN0Pccob02oDlpAjRLH+GRCRxA==",
-      "path": "paypal/1.9.1",
-      "hashPath": "paypal.1.9.1.nupkg.sha512"
+      "sha512": "sha512-2jEivNmSZFsK/iyoOu0l9+pEM2hXLQCvOQdLgQcr92cdnirl2xm+Wddy7lP6JTwZSLjAQ1ogHlal1tLu5hfZPw==",
+      "path": "restsharp/105.0.1",
+      "hashPath": "restsharp.105.0.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -4679,6 +4710,20 @@
       "sha512": "sha512-ZSwacbKJUsxJEZxwT23uZVrGbaIvXcADZDz5Sr66fikO5eehdcceDncjzwzTzWfW13di8gpTpstx3WJSt/Ci5Q==",
       "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.2",
       "hashPath": "sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512"
+    },
+    "Stripe/1.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IZ4xMz4vWqgH7RUyQMU/bljlr+gr/r/EMKUIg/PjTVjuyuXoXjbalgDnfDZ77GogCzJME3XIP1anBIMbaF4gvg==",
+      "path": "stripe/1.12.0",
+      "hashPath": "stripe.1.12.0.nupkg.sha512"
+    },
+    "Stripe.net/37.27.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Peo5RNsrk/HQXmuXTIpA5UnE/E2jqnVwUgUIUehNITQIAz0Ll3ODa5g1iFYWhv5G8zItzZ/XhMBdiw1mq3AthQ==",
+      "path": "stripe.net/37.27.0",
+      "hashPath": "stripe.net.37.27.0.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

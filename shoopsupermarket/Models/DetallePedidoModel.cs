@@ -9,12 +9,13 @@ namespace shoopsupermarket.Models
 {
     public class DetallePedido
     {
+        [ForeignKey("Pedido")]
         [Key, Column(Order = 0)]
         public int ORD_ID { get; set; }
+        [ForeignKey("Articulo")]
         [Key, Column(Order = 1)]
         public int ART_ID { get; set; }
         private string _DESC;
-        private int _CANT;
         private double _PRE_UNIT;
         private string _IMG;     
         
@@ -24,24 +25,17 @@ namespace shoopsupermarket.Models
         [Display(Name = "Descripción")]
         public string DESC
         {
-            get { return _DESC = Articulo.GetById(ART_ID).DESC; }
+            get { return _DESC = Articulo.DESC; }
             set { _DESC = value; }
         }   
 
         [Display(Name = "Cantidad")]
-        public int CANT { 
-            get{ return _CANT; }
-            set
-            {
-                _CANT = value;
-                //Articulo.UpdateStock(ART_ID, _CANT);
-            } 
-        }
+        public int CANT { get;set; }
 
         [Display(Name = "Precio")]
         public double PRE_UNIT
         {
-            get { return _PRE_UNIT = Articulo.GetById(ART_ID).PRE_VENT; }
+            get { return _PRE_UNIT = Articulo.PRE_VENT; }
             set { _PRE_UNIT = value; }
         }
 
@@ -54,7 +48,7 @@ namespace shoopsupermarket.Models
         [Display(Name = "Dirección de Imagen")]
         public string IMG
         {
-            get { return _IMG = Articulo.GetById(ART_ID).IMG; }
+            get { return _IMG = Articulo.IMG; }
             set { _IMG = value; }
         }
 

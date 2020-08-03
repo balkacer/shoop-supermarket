@@ -1,3 +1,4 @@
+using System.Net.Sockets;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -35,6 +36,11 @@ namespace shoopsupermarket.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+            public string Name { get; set; }
+            public float Long { get; set; }
+            public float Lat { get; set; }
+            public string Address { get; set; }
+            
         }
 
         private async Task LoadAsync(IdentityUser user)

@@ -32,22 +32,12 @@
                         <a class="nav-link text-dark" asp-controller="Proveedor" asp-action="Index">Proveedores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categoria</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Categorias
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach (Categoria cat in Categoria.Get()){
-                                <a class="dropdown-item" href="#">@cat.CAT</a>
-                            }
-                        </div>
+                        <a class="nav-link text-dark" asp-controller="Categorias" asp-action="Index">Categorias</a>
                     </li>
                 </ul>
-                <form class="my-2 my-lg-0" style="width: 100%;">
-                    <div class="input-group input-group-sm">
-                    <input class="form-control w-75" type="search" placeholder="Search" aria-label="Search">
+                <form class="my-2 my-lg-0" style="width: 100%;" asp-controller="Home" asp-action="Search" method="GET">
+                    <div class="input-group">
+                    <input class="form-control w-75" type="search" name="q" value="@ViewData["Desc"]" placeholder="Search" aria-label="Search">
                     <div class="input-group-append">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                         <button type="button" class="btn btn-outline-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +45,7 @@
                         </button>
                         <div class="dropdown-menu">
                             @foreach (Categoria cat in Categoria.Get()){
-                                <a class="dropdown-item" href="#">@cat.CAT</a>
+                                @Html.ActionLink(cat.CAT, "Search", "Home", new { q = "", c = cat.CAT }, new { @class = "dropdown-item" })
                             }
                         </div>
                     </div>

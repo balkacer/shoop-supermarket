@@ -6,11 +6,8 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    string caracter = UserManager.GetUserName(User);
-    caracter = caracter.Substring(0,caracter.IndexOf("@"));
-
     <li class="nav-item my-auto">
-        <a id="manage" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+        <a id="manage" style="cursor: pointer;" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
             <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt="" width="30">
         </a>
     </li>
