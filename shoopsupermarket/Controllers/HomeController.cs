@@ -10,7 +10,6 @@ using shoopsupermarket.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System.Configuration;
-using Stripe;
 using shoopsupermarket.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -53,15 +52,7 @@ namespace shoopsupermarket.Controllers
 
             if (!String.IsNullOrEmpty(c))
             {
-                if(c == "Bebida")
-                {
-                    articulos = articulos.Where(s => s.CAT_ID == PassId);
-                } 
-                    
-                else if(c == "Comida")
-                {
-                    articulos = articulos.Where(s => s.CAT_ID == PassId);
-                }
+                articulos = articulos.Where(s => s.CAT_ID == PassId);
             }
 
             if (!String.IsNullOrEmpty(q))

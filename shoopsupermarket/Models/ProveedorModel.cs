@@ -37,8 +37,6 @@ namespace shoopsupermarket.Models
             using(var db = new ApplicationDbContext()){
                 return db.Proveedores.ToList();
             }
-        }
-
-        
+        }        
     }
 }

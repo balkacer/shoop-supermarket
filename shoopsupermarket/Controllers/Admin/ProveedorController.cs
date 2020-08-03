@@ -1,34 +1,35 @@
-using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using shoopsupermarket.Data;
 using shoopsupermarket.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace shoopsupermarket.Controllers
 {
     //[Authorize(Roles="Admin")]
-    public class SliderConfiguracionController : Controller
+    public class ProveedorController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public SliderConfiguracionController(ApplicationDbContext context)
+        public ProveedorController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: SliderConfiguracion
-        public async Task<IActionResult> Index()
+        // GET: Proveedor
+        [Route("Admin/{controller}")]
+        public IActionResult Index()
         {
-            return View(await _context.SliderConfiguracion.ToListAsync());
+            return View(new Proveedor());
         }
 
-        // GET: SliderConfiguracion/Details/5
+        // GET: Proveedor/Details/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -36,39 +37,47 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var sliderConfiguracion = await _context.SliderConfiguracion
+            var proveedor = await _context.Proveedores
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (sliderConfiguracion == null)
+            if (proveedor == null)
             {
                 return NotFound();
             }
 
-            return View(sliderConfiguracion);
+            return View(proveedor);
         }
 
-        // GET: SliderConfiguracion/Create
+        // GET: Proveedor/Create
+        [Route("Admin/{controller}/{action}")]
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: SliderConfiguracion/Create
+        // POST: Proveedor/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,CONT")] SliderConfiguracion sliderConfiguracion)
+        [Route("Admin/{controller}/{action}")]
+        public async Task<IActionResult> Create([Bind("ID,NAME,PHONE1,PHONE2")] Proveedor proveedor)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(sliderConfiguracion);
+                proveedor.NAME = proveedor.NAME.ToUpper();
+                if(proveedor.PHONE2 == null)
+                {
+                    proveedor.PHONE2 = "N/A";
+                }
+                _context.Add(proveedor);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(sliderConfiguracion);
+            return View(proveedor);
         }
 
-        // GET: SliderConfiguracion/Edit/5
+        // GET: Proveedor/Edit/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -76,22 +85,23 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var sliderConfiguracion = await _context.SliderConfiguracion.FindAsync(id);
-            if (sliderConfiguracion == null)
+            var proveedor = await _context.Proveedores.FindAsync(id);
+            if (proveedor == null)
             {
                 return NotFound();
             }
-            return View(sliderConfiguracion);
+            return View(proveedor);
         }
 
-        // POST: SliderConfiguracion/Edit/5
+        // POST: Proveedor/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,CONT")] SliderConfiguracion sliderConfiguracion)
+        [Route("Admin/{controller}/{action}/{id}")]
+        public async Task<IActionResult> Edit(int id, [Bind("ID,NAME,PHONE1,PHONE2")] Proveedor proveedor)
         {
-            if (id != sliderConfiguracion.ID)
+            if (id != proveedor.ID)
             {
                 return NotFound();
             }
@@ -100,12 +110,17 @@ namespace shoopsupermarket.Controllers
             {
                 try
                 {
-                    _context.Update(sliderConfiguracion);
+                    if(proveedor.PHONE2 == null)
+                    {
+                        proveedor.PHONE2 = "N/A";
+                    }
+                    proveedor.NAME = proveedor.NAME.ToUpper();
+                    _context.Update(proveedor);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SliderConfiguracionExists(sliderConfiguracion.ID))
+                    if (!ProveedorExists(proveedor.ID))
                     {
                         return NotFound();
                     }
@@ -116,10 +131,11 @@ namespace shoopsupermarket.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(sliderConfiguracion);
+            return View(proveedor);
         }
 
-        // GET: SliderConfiguracion/Delete/5
+        // GET: Proveedor/Delete/5
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -127,30 +143,31 @@ namespace shoopsupermarket.Controllers
                 return NotFound();
             }
 
-            var sliderConfiguracion = await _context.SliderConfiguracion
+            var proveedor = await _context.Proveedores
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (sliderConfiguracion == null)
+            if (proveedor == null)
             {
                 return NotFound();
             }
 
-            return View(sliderConfiguracion);
+            return View(proveedor);
         }
 
-        // POST: SliderConfiguracion/Delete/5
+        // POST: Proveedor/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Route("Admin/{controller}/{action}/{id}")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var sliderConfiguracion = await _context.SliderConfiguracion.FindAsync(id);
-            _context.SliderConfiguracion.Remove(sliderConfiguracion);
+            var proveedor = await _context.Proveedores.FindAsync(id);
+            _context.Proveedores.Remove(proveedor);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool SliderConfiguracionExists(int id)
+        private bool ProveedorExists(int id)
         {
-            return _context.SliderConfiguracion.Any(e => e.ID == id);
+            return _context.Proveedores.Any(e => e.ID == id);
         }
     }
 }

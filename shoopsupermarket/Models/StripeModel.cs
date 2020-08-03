@@ -8,8 +8,6 @@ namespace shoopsupermarket.Models
     {
         [JsonProperty("id")]
         public string Id { get; set; }
-
-        ApplicationDbContext bd = new ApplicationDbContext();
     }
 
     public class PaymentIntentCreateRequest

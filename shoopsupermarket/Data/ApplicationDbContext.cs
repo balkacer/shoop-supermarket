@@ -15,8 +15,9 @@ namespace shoopsupermarket.Data
         public DbSet<Articulo> Articulos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
         public DbSet<SliderConfiguracion> SliderConfiguracion { get; set; }
-        public DbSet<Orden> Ordenes { get; set; }
-        public DbSet<ArticulosOrden> ArticulosOrdenes { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<DetallePedido> DetallePedidos { get; set; }
+        public DbSet<Estado> Estados { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -29,12 +30,12 @@ namespace shoopsupermarket.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlServer("Server=LAPTOP-9IB9T0EQ\\MYSERVER;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ArticulosOrden>().HasKey(o => new { o.ORD_ID, o.ART_ID });
+            modelBuilder.Entity<DetallePedido>().HasKey(o => new { o.ORD_ID, o.ART_ID });
 
             modelBuilder.Entity<Proveedor>().HasData(new Proveedor { ID = 2, NAME = "Santal", PHONE1 = "8297576437" });
             modelBuilder.Entity<Categoria>().HasData(new Categoria { ID = 2, CAT = "Comida" });

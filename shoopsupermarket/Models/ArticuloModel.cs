@@ -56,13 +56,13 @@ namespace shoopsupermarket.Models
             }
         }
 
-        public Articulo UpdateStock(int id, int cant){
-            using(var db = new ApplicationDbContext()){
-                Articulo art = db.Articulos.Find(id);
-                art.STOCK -= cant;
-                db.Articulos.Update(art);
-                return db.Articulos.Find(id);
-            }
-        }
+        // public Articulo UpdateStock(int id, int cant){
+        //     using(var db = new ApplicationDbContext()){
+        //         Articulo art = db.Articulos.Find(id);
+        //         art.STOCK -= cant;
+        //         db.Articulos.Update(art);
+        //         return db.Articulos.Find(id);
+        //     }
+        // }
     }
 }

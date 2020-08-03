@@ -11,11 +11,11 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    public class CarritoController : Controller
+    public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public CarritoController(ApplicationDbContext context)
+        public AdminController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -24,7 +24,5 @@ namespace shoopsupermarket.Controllers
         {
             return View();
         }
-
-        
     }
 }
