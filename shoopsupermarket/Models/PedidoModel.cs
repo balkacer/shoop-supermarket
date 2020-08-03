@@ -13,52 +13,30 @@ namespace shoopsupermarket.Models
 {
     public class Pedido
     {
-        public int ID { get; set; }
-        public string CLI_ID { get; set; }
-        public string USER { get; set; }
-        public string EMAIL { get; set; }
-        private DateTime _FECH_ORD;
-        private DateTime _FECH_ENV;
-        public string ADDR { get; set; }
-        public float LONG { get; set; }
-        public float LAT { get; set; }
-        public string COMENT { get; set; }
-        private double _TOTAL;
-        [Display(Name = "Estado")]
-        [Required (ErrorMessage = "¡Este campo es requerido!")]
-        public int EST_ID { get; set; }
-
-
-        
-        [Display(Name = "Estado")]
-        public virtual Estado ESTADO { get; set; }
-        public List<DetallePedido> Articulos { get; set; }
-        
-
-        public double TOTAL
-        {
-            get { return _TOTAL = SubtotalSum(); }
-            set { _TOTAL = value; }
-        }
-        [Display(Name = "Fecha de orden")]
-        [DataType(DataType.DateTime)]
-        [DisplayFormat(DataFormatString = "{0:dd mm yyy hh:mm:ss}")]
-        public DateTime FECH_ORD { 
-            get{ return _FECH_ORD; } 
-            set{ _FECH_ORD = DateTime.Now; }
-        }
-
-
-        public double SubtotalSum(){
-            using(var db = new ApplicationDbContext()){
-                var pr = db.DetallePedidos.Where(dp => dp.ORD_ID == ID).ToList();
-                double totalSuma = 0;
-                foreach (var item in pr)
-                {
-                    totalSuma += item.SUB_TOTAL;
-                }
-                return totalSuma;
-            }            
-        }
+        public int    ID   { get; set; }
+        public string Username   { get; set; }
+        public string FirstName  { get; set; }
+        public string LastName   { get; set; }
+        public string Address    { get; set; }
+        public string City       { get; set; }
+        public string State      { get; set; }
+        public string PostalCode { get; set; }
+        public string Country    { get; set; }
+        public string Phone      { get; set; }
+        public string Email      { get; set; }
+        public decimal Total     { get; set; }
+        public System.DateTime OrderDate      { get; set; }
+        public List<DetallePedido> DetallePedidos { get; set; }
     }
 }
+    //     public double SubtotalSum(){
+    //         using(var db = new ApplicationDbContext()){
+    //             var pr = db.DetallePedidos.Where(dp => dp.ORD_ID == ID).ToList();
+    //             double totalSuma = 0;
+    //             foreach (var item in pr)
+    //             {
+    //                 totalSuma += item.SUB_TOTAL;
+    //             }
+    //             return totalSuma;
+    //         }            
+    //     }

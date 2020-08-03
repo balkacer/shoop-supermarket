@@ -24,7 +24,36 @@ namespace shoopsupermarket.Controllers
         {
             return View();
         }
+        // private List<DetallePedido> product;
+        // public List<DetallePedido> Product { get => _context.DetallePedidos.ToList(); set => product = value; }
 
-        
+        // Session["cart"] = Product;
+
+        // public ActionResult AddToCart(int Id)
+        // {
+        //     if (Session["cart"] == null)
+        //     {
+        //         List<Item> cart = new List<Item>();
+        //         var product = _context.Articulos.Find(Id);
+        //         cart.Add(new Item()
+        //         {
+        //             Product = product,
+        //             Quantity = 1
+        //         });
+        //         Session["cart"] = cart;
+        //     }
+        //     else
+        //     {
+        //         List<Item> cart = (List<Item>)Session["cart"];
+        //         var product = ctx.Tbl_Product.Find(Id);
+        //         cart.Add(new Item()
+        //         {
+        //             Product = product,
+        //             Quantity = 1
+        //         });
+        //         Session["cart"] = cart;
+        //     }
+        //     return Redirect("Index");
+        // }
     }
 }

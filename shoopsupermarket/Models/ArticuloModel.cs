@@ -17,7 +17,7 @@ namespace shoopsupermarket.Models
         [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Display(Name = "Precio de Venta")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        public double PRE_VENT { get; set;}
+        public decimal PRE_VENT { get; set;}
         [Display(Name = "Stock")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
         private int _STOCK;
@@ -29,7 +29,7 @@ namespace shoopsupermarket.Models
         [Display(Name = "Precio de Compra")]
         [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        public double PRE_COMP { get; set;}
+        public decimal PRE_COMP { get; set;}
         [Display(Name = "Proveedor")]
         [Required (ErrorMessage = "¡Este campo es requerido!")]
         public int PROV_ID { get; set;}

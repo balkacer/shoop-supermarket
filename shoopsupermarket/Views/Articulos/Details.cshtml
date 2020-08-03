@@ -1,4 +1,4 @@
-@model shoopsupermarket.Models.Articulo
+@model Articulo
 
 @{
     ViewData["Title"] = "Details";
@@ -57,4 +57,28 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
     <a asp-action="Index">Back to List</a>
+</div>
+
+<h2>@Model.DESC</h2>
+<p>
+    <img alt="@Model.DESC"
+src="@Model.IMG" />
+</p>
+<div id="album-details">
+    <p>
+        <em>Categoría:</em>
+        @Model.CAT.CAT
+    </p>
+    <p>
+        <em>Proveedor:</em>
+        @Model.PROV.NAME
+    </p>
+    <p>
+        <em>Precio:</em>
+        @Html.DisplayFor(precio => Model.PRE_VENT)
+    </p>
+    <p class="button">
+        @Html.ActionLink("Agregar", "AddToCart", 
+        "ShoppingCart", new { id = Model.ID }, "")
+    </p>
 </div>

@@ -18,6 +18,8 @@ namespace shoopsupermarket.Data
         public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<DetallePedido> DetallePedidos { get; set; }
         public DbSet<Estado> Estados { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
