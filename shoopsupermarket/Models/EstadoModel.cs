@@ -13,8 +13,8 @@ namespace shoopsupermarket.Models
         [Display(Name = "Estado")]
         public string ESTADO { get; set; }
 
-        [ForeignKey("EST_ID")]
-        public ICollection<Articulo> Articulos { get; set; }
+        [ForeignKey("EstadoId")]
+        public ICollection<Pedido> Pedido { get; set; }
 
         public static List<Estado> Get(){
             using(var db = new ApplicationDbContext()){

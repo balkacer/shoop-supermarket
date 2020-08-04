@@ -5,13 +5,18 @@ using shoopsupermarket.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using System;
+using System.Threading.Tasks;
 
 namespace shoopsupermarket.Controllers
 {
     public class ShoppingCartController : Controller
     {
-        ApplicationDbContext context = new ApplicationDbContext();
-        //
+        private readonly ApplicationDbContext context;
+        
+        public ShoppingCartController (ApplicationDbContext _context)
+        {
+            context = _context;
+        }
         // GET: /ShoppingCart/
         public ActionResult Index()
         {
@@ -44,33 +49,17 @@ namespace shoopsupermarket.Controllers
             return RedirectToAction("Index", "Home");
         }
         //
-        // AJAX: /ShoppingCart/RemoveFromCart/5
+        // POST: /ShoppingCart/RemoveFromCart/5
         [HttpPost]
-        public ActionResult RemoveFromCart(int id)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveFromCart(int id)
         {
-            // Remove the item from the cart
-            var cart = ShoppingCart.GetCart(this.HttpContext);
- 
-            // Get the name of the album to display confirmation
-            string art = context.Carts
-                .Single(item => item.RecordId == id).Articulo.DESC;
- 
-            // Remove from cart
-            int itemCount = cart.RemoveFromCart(id);
- 
-            // Display the confirmation message
-            var results = new ShoppingCartRemoveViewModel
-            {
-                Message = System.Web.HttpUtility.HtmlEncode(art) +
-                    " se eliminió del carrito.",
-                CartTotal = cart.GetTotal(),
-                CartCount = cart.GetCount(),
-                ItemCount = itemCount,
-                DeleteId = id
-            };
-            return Json(results);
+            var cartItem = await context.Carts.FindAsync(id);
+            context.Carts.Remove(cartItem);
+            await context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
         }
-        //
+        
         // GET: /ShoppingCart/CartSummary
         // [ChildActionOnly]
         public ActionResult CartSummary()

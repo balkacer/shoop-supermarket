@@ -35,7 +35,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
           "Stripe": "1.12.0",
           "Stripe.net": "37.27.0",
-          "System.Web.Mvc": "2.0.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2572,17 +2571,6 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
-        }
-      },
-      "System.Web.Mvc/2.0.0.0": {
-        "runtime": {
-          "System.Web.Mvc.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.0.60926.0"
-          }
-        },
-        "compile": {
-          "System.Web.Mvc.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5461,11 +5449,6 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
-    },
-    "System.Web.Mvc/2.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

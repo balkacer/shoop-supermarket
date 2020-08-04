@@ -20,11 +20,13 @@ namespace shoopsupermarket.Models
         public string Address    { get; set; }
         public string City       { get; set; }
         public string State      { get; set; }
-        public string PostalCode { get; set; }
+        public decimal Longitud { get; set; }
+        public decimal Latitud { get; set; }
         public string Country    { get; set; }
         public string Phone      { get; set; }
-        public string Email      { get; set; }
         public decimal Total     { get; set; }
+        public int EstadoId { get; set; }
+        public Estado Estado { get; set; }
         public System.DateTime OrderDate      { get; set; }
         public List<DetallePedido> DetallePedidos { get; set; }
     }

@@ -2,81 +2,71 @@
 @{
     ViewBag.Title = "Shopping Cart";
 }
-<script src="/Scripts/jquery-1.4.4.min.js"
-type="text/javascript"></script>
-<script type="text/javascript">
-    $(function () {
-        // Document.ready -> link up remove event handler
-        $(".RemoveLink").click(function () {
-            // Get the id from the link
-            var recordToDelete = $(this).attr("data-id");
-            if (recordToDelete != '') {
-                // Perform the ajax post
-                $.post("/ShoppingCart/RemoveFromCart", {"id": recordToDelete },
-                    function (data) {
-                        // Successful requests get here
-                        // Update the page elements
-                        if (data.ItemCount == 0) {
-                            $('#row-' + data.DeleteId).fadeOut('slow');
-                        } else {
-                            $('#item-count-' + data.DeleteId).text(data.ItemCount);
-                        }
-                        $('#cart-total').text(data.CartTotal);
-                        $('#update-message').text(data.Message);
-                        $('#cart-status').text('Cart (' + data.CartCount + ')');
-                    });
+
+<div class="container my-4">
+    @if (Model.CartItems.Count() > 0)
+    { 
+    <div class="row">
+        <div class="col-8">
+            @foreach (var item in Model.CartItems)
+            {
+                <div class="card my-2">
+                    <div class="card-body row">
+                        <div class="col-2">
+                            @* <a href="@item.Articulo.IMG" target="_blank" rel="noopener noreferrer">
+                                <img width="100vh" src="@item.Articulo.IMG" alt="">
+                            </a>*@
+                        </div>
+                        <div class="col-6">
+                            @* @Html.ActionLink(item.Articulo.DESC, "Details", "Articulos", new { id = item.ArticuloId }, null) *@
+                        </div>
+                        <div class="col">
+                            <p>@item.Count</p>
+                        </div>
+                        <div class="col">
+                            @item.RecordId
+                            @* Precio: @item.Articulo.PRE_VENT *@
+                        </div>
+                        <div class="col">
+                            <form asp-action="RemoveFromCart" asp-route-id="@item.RecordId">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </form>
+                            @* <a asp-controller="ShoppingCart" asp-action="RemoveFromCart" asp-route-id="@item.RecordId" class="btn btn-danger">
+                                <i class="fa fa-trash"></i>
+                            </a> *@
+                        </div>
+                    </div>
+                </div>
             }
-        });
-    });
-</script>
-<h3>
-    <em>Review</em> your cart:
- </h3>
-<p class="button">
-    @Html.ActionLink("Checkout", "AddressAndPayment", "Checkout")
-</p>
-<div id="update-message">
-</div>
-<table>
-    <tr>
-        <th>
-            Album Name
-        </th>
-        <th>
-            Price (each)
-        </th>
-        <th>
-            Quantity
-        </th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model.CartItems)
+        </div>
+        <div class="col-4">
+            <div class="card my-2">
+                <div class="card-header">
+                    Checkout
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text float-left">Total</p>
+                            <h5 class="card-title float-right">@Model.CartTotal</h5>
+                        </div>
+                    </div>
+                    @Html.ActionLink("Checkout", "AddressAndPayment", "Checkout", null, new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+    }else
     {
-        <tr id="row-@item.RecordId">
-            <td>
-                @Html.ActionLink(item.Articulo.DESC, "Details", "Articulos", new { id = item.ArticuloId }, null)
-            </td>
-            <td>
-                @item.Articulo.PRE_VENT
-            </td>
-            <td id="item-count-@item.RecordId">
-                @item.Count
-            </td>
-            <td>
-                <a href="#" class="RemoveLink" data-id="@item.RecordId">Remove from cart</a>
-            </td>
-        </tr>
+    <div class="text-center">
+        <div class="row">
+            <div class="col m-auto">
+                <p>No tienes ningún artículo en tu carrito. ¡Vamos de compras!</p>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Empieza a comprar</a>
+            </div>
+        </div>
+    </div>
     }
-    <tr>
-        <td>
-            Total
-        </td>
-        <td>
-        </td>
-        <td>
-        </td>
-        <td id="cart-total">
-            @Model.CartTotal
-        </td>
-    </tr>
-</table>
+</div>

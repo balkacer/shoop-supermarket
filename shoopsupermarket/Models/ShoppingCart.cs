@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using shoopsupermarket.Data;
-using Controller = Microsoft.AspNetCore.Mvc.Controller;
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace shoopsupermarket.Models
 {
@@ -149,25 +148,23 @@ namespace shoopsupermarket.Models
             // Return the OrderId as the confirmation number
             return pedido.ID;
         }
-        // We're using HttpContextBase to allow access to cookies.
+        // We're using HttpContext to allow access to cookies.
         public string GetCartId(HttpContext context)
         {
-            
             if (context.Session.GetString(CartSessionKey) == null)
             {
                 if (!string.IsNullOrWhiteSpace(context.User.Identity.Name))
                 {
-                    context.Session.SetString(CartSessionKey,context.User.Identity.Name);
+                    context.Session.SetString(CartSessionKey, context.User.Identity.Name);
                 }
                 else
                 {
-                    // Generate a new random GUID using System.Guid class
-                    Guid tempCartId = Guid.NewGuid();
-                    // Send tempCartId back to client as a cookie
-                    context.Session.SetString(CartSessionKey,tempCartId.ToString());
+                    var tempCartId = Guid.NewGuid();
+                    context.Session.SetString(CartSessionKey, tempCartId.ToString());
                 }
             }
-            return context.Session.GetString(CartSessionKey).ToString();
+
+            return context.Session.GetString(CartSessionKey);
         }
         // When a user has logged in, migrate their shopping cart to
         // be associated with their username

@@ -1,5 +1,4 @@
 @model IEnumerable<shoopsupermarket.Models.Articulo>
-
 @{
     ViewData["Title"] = "Index";
 }
@@ -40,7 +39,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.DESC)
+                @{int length = 25; string desc = "";}
+                @if (item.DESC.Length <= length) {
+                    desc = item.DESC;
+                } else {
+                    desc = item.DESC.Substring(0, length)+"...";
+                }
+                @Html.DisplayFor(modelItem => desc)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.PRE_VENT)
@@ -58,7 +63,13 @@
                 @Html.DisplayFor(modelItem => item.CAT.CAT)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IMG)
+                @{ string url = "";}
+                @if (item.IMG.Length <= length) {
+                    url = item.IMG;
+                } else {
+                    url = item.IMG.Substring(0, length)+"...";
+                }
+                @Html.DisplayFor(modelItem => url)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

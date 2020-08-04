@@ -12,9 +12,9 @@
         </a>
     </li>
     <li class="nav-item my-auto">
-        <a class="" asp-controller="ShoppingCart" asp-action="Index">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart.png" alt="" width="30">
-        </a>
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="btn btn-danger btn-sm text-white my-1 ml-2">Cerrar sesion</button>
+        </form>
     </li>
 }
 else
@@ -23,4 +23,11 @@ else
         <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Iniciar sesion</a>
     </li>
 }
+    <li class="nav-item my-auto">
+        <a class="" asp-controller="ShoppingCart" asp-action="Index" title="ShoppingCart">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart.png" alt="" width="30">
+        </a>
+    </li>
 </ul>
+
+
