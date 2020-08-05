@@ -966,8 +966,8 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Details.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Edit.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Index.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Create.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Delete.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Details.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Edit.cshtml.g.cs
-C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Index.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Index.cshtml.g.cs

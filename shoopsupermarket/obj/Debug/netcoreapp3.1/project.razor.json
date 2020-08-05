@@ -20561,11 +20561,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Delete.cshtml",
-      "TargetPath": "Views\\Estado\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Pedido\\Delete.cshtml",
       "TargetPath": "Views\\Pedido\\Delete.cshtml",
       "FileKind": "mvc"
@@ -20598,16 +20593,6 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\ShowRecoveryCodes.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Create.cshtml",
-      "TargetPath": "Views\\Estado\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Details.cshtml",
-      "TargetPath": "Views\\Estado\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20651,6 +20636,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Create.cshtml",
+      "TargetPath": "Views\\Estados\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Logout.cshtml",
       "FileKind": "mvc"
@@ -20668,11 +20658,6 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Edit.cshtml",
-      "TargetPath": "Views\\Estado\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20771,6 +20756,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Edit.cshtml",
+      "TargetPath": "Views\\Estados\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
       "FileKind": "mvc"
@@ -20788,11 +20778,6 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Index.cshtml",
-      "TargetPath": "Views\\Estado\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20823,6 +20808,11 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResendEmailConfirmation.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Index.cshtml",
+      "TargetPath": "Views\\Estados\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20906,6 +20896,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Delete.cshtml",
+      "TargetPath": "Views\\Estados\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
       "FileKind": "mvc"
@@ -20928,6 +20923,11 @@
     {
       "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Edit.cshtml",
       "TargetPath": "Views\\Articulos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\DELL PC\\Desktop\\Enmanuel\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Details.cshtml",
+      "TargetPath": "Views\\Estados\\Details.cshtml",
       "FileKind": "mvc"
     },
     {

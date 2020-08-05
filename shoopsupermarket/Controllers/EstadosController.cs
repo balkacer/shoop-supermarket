@@ -10,22 +10,22 @@ using shoopsupermarket.Models;
 
 namespace shoopsupermarket.Controllers
 {
-    public class EstadoController : Controller
+    public class EstadosController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public EstadoController(ApplicationDbContext context)
+        public EstadosController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Estado
+        // GET: Estados
         public async Task<IActionResult> Index()
         {
             return View(await _context.Estados.ToListAsync());
         }
 
-        // GET: Estado/Details/5
+        // GET: Estados/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -43,18 +43,18 @@ namespace shoopsupermarket.Controllers
             return View(estado);
         }
 
-        // GET: Estado/Create
+        // GET: Estados/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Estado/Create
+        // POST: Estados/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,ESTADO")] Estado estado)
+        public async Task<IActionResult> Create([Bind("ID,NOMBRE")] Estado estado)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace shoopsupermarket.Controllers
             return View(estado);
         }
 
-        // GET: Estado/Edit/5
+        // GET: Estados/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,12 +81,12 @@ namespace shoopsupermarket.Controllers
             return View(estado);
         }
 
-        // POST: Estado/Edit/5
+        // POST: Estados/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,ESTADO")] Estado estado)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,NOMBRE")] Estado estado)
         {
             if (id != estado.ID)
             {
@@ -116,7 +116,7 @@ namespace shoopsupermarket.Controllers
             return View(estado);
         }
 
-        // GET: Estado/Delete/5
+        // GET: Estados/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +134,7 @@ namespace shoopsupermarket.Controllers
             return View(estado);
         }
 
-        // POST: Estado/Delete/5
+        // POST: Estados/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
