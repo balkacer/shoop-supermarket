@@ -234,18 +234,15 @@ namespace shoopsupermarket.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<int?>("EST_ID")
-                        .HasColumnType("int");
-
                     b.Property<string>("IMG")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("PRE_COMP")
-                        .HasColumnType("float");
+                    b.Property<decimal>("PRE_COMP")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<double>("PRE_VENT")
-                        .HasColumnType("float");
+                    b.Property<decimal>("PRE_VENT")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("PROV_ID")
                         .HasColumnType("int");
@@ -256,8 +253,6 @@ namespace shoopsupermarket.Migrations
                     b.HasKey("ID");
 
                     b.HasIndex("CAT_ID");
-
-                    b.HasIndex("EST_ID");
 
                     b.HasIndex("PROV_ID");
 
@@ -270,11 +265,37 @@ namespace shoopsupermarket.Migrations
                             CAT_ID = 1,
                             DESC = "Jugo de Manzana",
                             IMG = "https://res.cloudinary.com/almacendo/image/upload/v1569273056/Jugos/Jugo-Santal-Sabor-Manzana_-200ml-Caja-_24-uds_-Turn.jpg",
-                            PRE_COMP = 15.0,
-                            PRE_VENT = 15.0,
+                            PRE_COMP = 15m,
+                            PRE_VENT = 15m,
                             PROV_ID = 1,
                             STOCK = 20
                         });
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.Cart", b =>
+                {
+                    b.Property<int>("RecordId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ArticuloId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("RecordId");
+
+                    b.HasIndex("ArticuloId");
+
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.Categoria", b =>
@@ -307,21 +328,26 @@ namespace shoopsupermarket.Migrations
                     b.Property<int>("ART_ID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ArticuloID")
+                        .HasColumnType("int");
+
                     b.Property<int>("CANT")
                         .HasColumnType("int");
 
-                    b.Property<string>("DESC")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("ID")
+                        .HasColumnType("int");
 
-                    b.Property<string>("IMG")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("PRE_UNIT")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<double>("PRE_UNIT")
-                        .HasColumnType("float");
+                    b.Property<int?>("PedidoID")
+                        .HasColumnType("int");
 
                     b.HasKey("ORD_ID", "ART_ID");
 
-                    b.HasIndex("ART_ID");
+                    b.HasIndex("ArticuloID");
+
+                    b.HasIndex("PedidoID");
 
                     b.ToTable("DetallePedidos");
                 });
@@ -334,6 +360,7 @@ namespace shoopsupermarket.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ESTADO")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -348,42 +375,48 @@ namespace shoopsupermarket.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ADDR")
+                    b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CLI_ID")
+                    b.Property<string>("City")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("COMENT")
+                    b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EMAIL")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ESTADOID")
+                    b.Property<int>("EstadoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("EST_ID")
-                        .HasColumnType("int");
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("FECH_ORD")
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Latitud")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Longitud")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<float>("LAT")
-                        .HasColumnType("real");
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("LONG")
-                        .HasColumnType("real");
+                    b.Property<string>("State")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("TOTAL")
-                        .HasColumnType("float");
+                    b.Property<decimal>("Total")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("USER")
+                    b.Property<string>("Username")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("ESTADOID");
+                    b.HasIndex("EstadoId");
 
                     b.ToTable("Pedidos");
                 });
@@ -420,6 +453,16 @@ namespace shoopsupermarket.Migrations
                             NAME = "Santal",
                             PHONE1 = "8297576437"
                         });
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.ShoppingCart", b =>
+                {
+                    b.Property<string>("ShoppingCartId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("ShoppingCartId");
+
+                    b.ToTable("ShoppingCarts");
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.SliderConfiguracion", b =>
@@ -497,13 +540,18 @@ namespace shoopsupermarket.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("shoopsupermarket.Models.Estado", null)
-                        .WithMany("Articulos")
-                        .HasForeignKey("EST_ID");
-
                     b.HasOne("shoopsupermarket.Models.Proveedor", "PROV")
                         .WithMany("Articulos")
                         .HasForeignKey("PROV_ID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("shoopsupermarket.Models.Cart", b =>
+                {
+                    b.HasOne("shoopsupermarket.Models.Articulo", "Articulo")
+                        .WithMany("Carts")
+                        .HasForeignKey("ArticuloId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -512,22 +560,20 @@ namespace shoopsupermarket.Migrations
                 {
                     b.HasOne("shoopsupermarket.Models.Articulo", "Articulo")
                         .WithMany()
-                        .HasForeignKey("ART_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ArticuloID");
 
                     b.HasOne("shoopsupermarket.Models.Pedido", "Pedido")
-                        .WithMany("Articulos")
-                        .HasForeignKey("ORD_ID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("DetallePedidos")
+                        .HasForeignKey("PedidoID");
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.Pedido", b =>
                 {
-                    b.HasOne("shoopsupermarket.Models.Estado", "ESTADO")
-                        .WithMany()
-                        .HasForeignKey("ESTADOID");
+                    b.HasOne("shoopsupermarket.Models.Estado", "Estado")
+                        .WithMany("Pedido")
+                        .HasForeignKey("EstadoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -28,7 +28,7 @@ a{
     top: 0;
 }
 
-.card .card-body input[type="number"]{
+/* .card .card-body input[type="number"]{
     position: relative;
     width: 30%;
     border-top-right-radius: 0;
@@ -39,7 +39,7 @@ a{
     width: 70%;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-}
+} */
 /* 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

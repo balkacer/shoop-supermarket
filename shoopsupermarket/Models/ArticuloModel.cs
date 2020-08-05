@@ -17,19 +17,14 @@ namespace shoopsupermarket.Models
         [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Display(Name = "Precio de Venta")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        public double PRE_VENT { get; set;}
+        public decimal PRE_VENT { get; set;}
         [Display(Name = "Stock")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        private int _STOCK;
-        public int STOCK
-        {
-            get { return _STOCK;}
-            set { _STOCK = value;}
-        }
+        public int STOCK{ get; set; }
         [Display(Name = "Precio de Compra")]
         [DataType(DataType.Currency, ErrorMessage = "¡Introduce un valor de moneda!")]
         [Required (ErrorMessage = "¡Este campo es requerido")]
-        public double PRE_COMP { get; set;}
+        public decimal PRE_COMP { get; set;}
         [Display(Name = "Proveedor")]
         [Required (ErrorMessage = "¡Este campo es requerido!")]
         public int PROV_ID { get; set;}
@@ -44,6 +39,8 @@ namespace shoopsupermarket.Models
         [Display(Name = "Direccion de la imagen")]
         [DataType(DataType.Url)]
         public string IMG { get; set; }
+        [ForeignKey("ArticuloId")]
+        public ICollection<Cart> Carts { get; set; }
         public List<Articulo> Get(){
             using(var db = new ApplicationDbContext()){
                 return db.Articulos.ToList();

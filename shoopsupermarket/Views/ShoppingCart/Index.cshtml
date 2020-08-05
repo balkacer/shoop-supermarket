@@ -1,0 +1,82 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model shoopsupermarket.ViewModels.ShoppingCartViewModel
+@{
+    ViewBag.Title = "Shopping Cart";
+}
+
+<div class="container my-4">
+    @if (Model.CartItems.Count() > 0)
+    { 
+    <div class="row">
+        <div class="col-8">
+            @foreach (var item in Model.CartItems)
+            {
+                <div class="card my-2">
+                    <div class="card-body row">
+                        <div class="col-2">
+                            <a href="@item.Articulo.IMG" target="_blank" rel="noopener noreferrer">
+                                <img width="80vh" src="@item.Articulo.IMG" alt="">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            @Html.ActionLink(item.Articulo.DESC, "Details", "Articulos", new { id = item.ArticuloId }, null)
+                        </div>
+                        <div class="col">
+                            <p>@item.Count</p>
+                        </div>
+                        <div class="col">
+                            <p>@item.Articulo.PRE_VENT</p>
+                        </div>
+                        <div class="col">
+                            @{ decimal Subtotal = item.Count * item.Articulo.PRE_VENT; }
+                            <p>@Subtotal</p>
+                        </div>
+                        <div class="col">
+                            <form asp-action="RemoveFromCart" asp-route-id="@item.RecordId">
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="col-4">
+            <div class="card my-2">
+                <div class="card-header">
+                    Checkout
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text float-left">Total</p>
+                            <h5 class="card-title float-right">@Model.CartTotal</h5>
+                        </div>
+                    </div>
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        @Html.ActionLink("Checkout", "Create", "Pedido", null, new { @class = "btn btn-primary" })
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Checkout</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    }else
+    {
+    <div class="text-center">
+        <div class="row">
+            <div class="col m-auto">
+                <p>No tienes ningún artículo en tu carrito. ¡Vamos de compras!</p>
+                <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Empieza a comprar</a>
+            </div>
+        </div>
+    </div>
+    }
+</div>

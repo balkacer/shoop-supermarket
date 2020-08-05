@@ -18,8 +18,8 @@
                         <h5 class="card-title">@Html.DisplayFor(modelItem => item.DESC)</h5> 
                         <span class="float-left badge p-2 badge-success">@Html.DisplayFor(modelItem => item.PRE_VENT)</span>
                         
-                        <input type="number" class="form-control float-left" value="1" min="1">
-                        <a asp-controller="Carrito" asp-action="Index" class="btn btn-primary float-right" style="width: 70%;">Agregar</a>             
+                        @* <input type="number" class="form-control float-left" value="1" min="1"> *@
+                        <a asp-controller="ShoppingCart" asp-action="AddToCart" class="btn btn-primary btn-block btn-lg" asp-route-id="@item.ID">Agregar</a>      
                     </div>
                 </div>
             </div>
