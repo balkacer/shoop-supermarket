@@ -10,8 +10,8 @@ using shoopsupermarket.Data;
 namespace shoopsupermarket.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200804234138_CartInArtMigration")]
-    partial class CartInArtMigration
+    [Migration("20200805064244_ToHostingMigration")]
+    partial class ToHostingMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -259,19 +259,6 @@ namespace shoopsupermarket.Migrations
                     b.HasIndex("PROV_ID");
 
                     b.ToTable("Articulos");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 2,
-                            CAT_ID = 1,
-                            DESC = "Jugo de Manzana",
-                            IMG = "https://res.cloudinary.com/almacendo/image/upload/v1569273056/Jugos/Jugo-Santal-Sabor-Manzana_-200ml-Caja-_24-uds_-Turn.jpg",
-                            PRE_COMP = 15m,
-                            PRE_VENT = 15m,
-                            PROV_ID = 1,
-                            STOCK = 20
-                        });
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.Cart", b =>
@@ -313,19 +300,14 @@ namespace shoopsupermarket.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Categorias");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 2,
-                            CAT = "Comida"
-                        });
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.DetallePedido", b =>
                 {
-                    b.Property<int>("ORD_ID")
-                        .HasColumnType("int");
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("ART_ID")
                         .HasColumnType("int");
@@ -336,7 +318,7 @@ namespace shoopsupermarket.Migrations
                     b.Property<int>("CANT")
                         .HasColumnType("int");
 
-                    b.Property<int>("ID")
+                    b.Property<int>("ORD_ID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("PRE_UNIT")
@@ -345,7 +327,7 @@ namespace shoopsupermarket.Migrations
                     b.Property<int?>("PedidoID")
                         .HasColumnType("int");
 
-                    b.HasKey("ORD_ID", "ART_ID");
+                    b.HasKey("ID");
 
                     b.HasIndex("ArticuloID");
 
@@ -361,7 +343,8 @@ namespace shoopsupermarket.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("ESTADO")
+                    b.Property<string>("NOMBRE")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -446,14 +429,6 @@ namespace shoopsupermarket.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Proveedores");
-
-                    b.HasData(
-                        new
-                        {
-                            ID = 2,
-                            NAME = "Santal",
-                            PHONE1 = "8297576437"
-                        });
                 });
 
             modelBuilder.Entity("shoopsupermarket.Models.ShoppingCart", b =>
@@ -551,7 +526,7 @@ namespace shoopsupermarket.Migrations
             modelBuilder.Entity("shoopsupermarket.Models.Cart", b =>
                 {
                     b.HasOne("shoopsupermarket.Models.Articulo", "Articulo")
-                        .WithMany("Cart")
+                        .WithMany("Carts")
                         .HasForeignKey("ArticuloId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

@@ -12,7 +12,7 @@ namespace shoopsupermarket.Models
 
         [Required]
         [Display(Name = "Estado")]
-        public string ESTADO { get; set; }
+        public string NOMBRE { get; set; }
 
         [ForeignKey("EstadoId")]
         public ICollection<Pedido> Pedido { get; set; }

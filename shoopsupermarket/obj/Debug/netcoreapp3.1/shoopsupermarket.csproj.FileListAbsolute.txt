@@ -973,14 +973,20 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Edit.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Index.cshtml.g.cs
 >>>>>>> e61b84f7378dfc628df22fca87232204b66f452c
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Create.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Delete.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Details.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Edit.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estado\Index.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Create.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Delete.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Details.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Edit.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Index.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Create.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Delete.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Details.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Edit.cshtml.g.cs
+C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Index.cshtml.g.cs
+>>>>>>> bf29ecbd747281a0e2899b382f1aa251cb441fd1
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Create.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Delete.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Details.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Edit.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Index.cshtml.g.cs

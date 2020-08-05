@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace shoopsupermarket.Migrations
 {
-    public partial class LastMigration : Migration
+    public partial class ToHostingMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -65,7 +65,7 @@ namespace shoopsupermarket.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ESTADO = table.Column<string>(nullable: true)
+                    NOMBRE = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -85,6 +85,17 @@ namespace shoopsupermarket.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Proveedores", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ShoppingCarts",
+                columns: table => new
+                {
+                    ShoppingCartId = table.Column<string>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ShoppingCarts", x => x.ShoppingCartId);
                 });
 
             migrationBuilder.CreateTable(
@@ -212,27 +223,29 @@ namespace shoopsupermarket.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CLI_ID = table.Column<string>(nullable: true),
-                    USER = table.Column<string>(nullable: true),
-                    EMAIL = table.Column<string>(nullable: true),
-                    ADDR = table.Column<string>(nullable: true),
-                    LONG = table.Column<float>(nullable: false),
-                    LAT = table.Column<float>(nullable: false),
-                    COMENT = table.Column<string>(nullable: true),
-                    EST_ID = table.Column<int>(nullable: false),
-                    ESTADOID = table.Column<int>(nullable: true),
-                    TOTAL = table.Column<double>(nullable: false),
-                    FECH_ORD = table.Column<DateTime>(nullable: false)
+                    Username = table.Column<string>(nullable: true),
+                    FirstName = table.Column<string>(nullable: true),
+                    LastName = table.Column<string>(nullable: true),
+                    Address = table.Column<string>(nullable: true),
+                    City = table.Column<string>(nullable: true),
+                    State = table.Column<string>(nullable: true),
+                    Longitud = table.Column<decimal>(nullable: false),
+                    Latitud = table.Column<decimal>(nullable: false),
+                    Country = table.Column<string>(nullable: true),
+                    Phone = table.Column<string>(nullable: true),
+                    Total = table.Column<decimal>(nullable: false),
+                    EstadoId = table.Column<int>(nullable: false),
+                    OrderDate = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Pedidos", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Pedidos_Estados_ESTADOID",
-                        column: x => x.ESTADOID,
+                        name: "FK_Pedidos_Estados_EstadoId",
+                        column: x => x.EstadoId,
                         principalTable: "Estados",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -242,13 +255,12 @@ namespace shoopsupermarket.Migrations
                     ID = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DESC = table.Column<string>(maxLength: 50, nullable: false),
-                    PRE_VENT = table.Column<double>(nullable: false),
+                    PRE_VENT = table.Column<decimal>(nullable: false),
                     STOCK = table.Column<int>(nullable: false),
-                    PRE_COMP = table.Column<double>(nullable: false),
+                    PRE_COMP = table.Column<decimal>(nullable: false),
                     PROV_ID = table.Column<int>(nullable: false),
                     CAT_ID = table.Column<int>(nullable: false),
-                    IMG = table.Column<string>(nullable: false),
-                    EST_ID = table.Column<int>(nullable: true)
+                    IMG = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -260,12 +272,6 @@ namespace shoopsupermarket.Migrations
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Articulos_Estados_EST_ID",
-                        column: x => x.EST_ID,
-                        principalTable: "Estados",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
                         name: "FK_Articulos_Proveedores_PROV_ID",
                         column: x => x.PROV_ID,
                         principalTable: "Proveedores",
@@ -274,96 +280,61 @@ namespace shoopsupermarket.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "DetallePedidos",
+                name: "Carts",
                 columns: table => new
                 {
-                    ORD_ID = table.Column<int>(nullable: false),
-                    ART_ID = table.Column<int>(nullable: false),
-                    DESC = table.Column<string>(nullable: true),
-                    CANT = table.Column<int>(nullable: false),
-                    PRE_UNIT = table.Column<double>(nullable: false),
-                    IMG = table.Column<string>(nullable: true)
+                    RecordId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CartId = table.Column<string>(nullable: true),
+                    ArticuloId = table.Column<int>(nullable: false),
+                    Count = table.Column<int>(nullable: false),
+                    DateCreated = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DetallePedidos", x => new { x.ORD_ID, x.ART_ID });
+                    table.PrimaryKey("PK_Carts", x => x.RecordId);
                     table.ForeignKey(
-                        name: "FK_DetallePedidos_Articulos_ART_ID",
-                        column: x => x.ART_ID,
+                        name: "FK_Carts_Articulos_ArticuloId",
+                        column: x => x.ArticuloId,
                         principalTable: "Articulos",
-                        principalColumn: "ID",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_DetallePedidos_Pedidos_ORD_ID",
-                        column: x => x.ORD_ID,
-                        principalTable: "Pedidos",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            // CATEGORIAS
-            migrationBuilder.InsertData(
-                table: "Categorias",
-                columns: new[] { "CAT" },
-                values: new object[] { "Comida" });
-
-            migrationBuilder.InsertData(
-                table: "Categorias",
-                columns: new[] { "CAT" },
-                values: new object[] { "Bebida" });
-
-            // PROVEEDORES
-            migrationBuilder.InsertData(
-                table: "Proveedores",
-                columns: new[] {"NAME", "PHONE1", "PHONE2" },
-                values: new object[] { "Santal", "8297576437", null });
-
-            migrationBuilder.InsertData(
-                table: "Proveedores",
-                columns: new[] { "NAME", "PHONE1", "PHONE2" },
-                values: new object[] { "Rica", "8097576438", null });
-
-            migrationBuilder.InsertData(
-                table: "Proveedores",
-                columns: new[] { "NAME", "PHONE1", "PHONE2" },
-                values: new object[] { "Induveca", "8497576439", null });
-
-            // SliderConfiguracion
-            migrationBuilder.InsertData(
-                table: "SliderConfiguracion",
-                columns: new[] { "CONT" },
-                values: new object[] { "https://s1.eestatic.com/2019/04/11/actualidad/Actualidad_390223215_120196577_1706x960.jpg" });
-
-            migrationBuilder.InsertData(
-                table: "SliderConfiguracion",
-                columns: new[] { "CONT" },
-                values: new object[] { "https://www.eluniversal.com.mx/sites/default/files/2020/03/26/jugos_multivitaminicos.jpg" });
-
-            // ARTICULOS
-            migrationBuilder.InsertData(
-                table: "Articulos",
-                columns: new[] { "CAT_ID", "DESC", "IMG", "PRE_COMP", "PRE_VENT", "PROV_ID", "STOCK" },
-                values: new object[] { 2, "Jugo de Manzana", "https://res.cloudinary.com/almacendo/image/upload/v1569273056/Jugos/Jugo-Santal-Sabor-Manzana_-200ml-Caja-_24-uds_-Turn.jpg", 15.0, 20.0, 1, 20 });
-
-            migrationBuilder.InsertData(
-                table: "Articulos",
-                columns: new[] { "CAT_ID", "DESC", "IMG", "PRE_COMP", "PRE_VENT", "PROV_ID", "STOCK" },
-                values: new object[] { 2, "Jugo de Naranja", "https://cdn.shopify.com/s/files/1/0123/4455/7664/products/JUGO_RICA_NARANJA_200_ML_codigo_7460111102568_da10438b-5c9e-4ad2-8f18-eff78065074b.jpg?v=1585719021", 15.49, 25.0, 2, 50 });
-
-            migrationBuilder.InsertData(
-                table: "Articulos",
-                columns: new[] { "CAT_ID", "DESC", "IMG", "PRE_COMP", "PRE_VENT", "PROV_ID", "STOCK" },
-                values: new object[] { 1, "Salami", "https://cdn.shopify.com/s/files/1/0123/4455/7664/products/edit_5307156f-30bf-4116-8b06-202545f24df2.jpg?v=1593010340", 50.40, 70.0, 3, 100 });
+            migrationBuilder.CreateTable(
+                name: "DetallePedidos",
+                columns: table => new
+                {
+                    ID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ORD_ID = table.Column<int>(nullable: false),
+                    ART_ID = table.Column<int>(nullable: false),
+                    PedidoID = table.Column<int>(nullable: true),
+                    ArticuloID = table.Column<int>(nullable: true),
+                    CANT = table.Column<int>(nullable: false),
+                    PRE_UNIT = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DetallePedidos", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_DetallePedidos_Articulos_ArticuloID",
+                        column: x => x.ArticuloID,
+                        principalTable: "Articulos",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_DetallePedidos_Pedidos_PedidoID",
+                        column: x => x.PedidoID,
+                        principalTable: "Pedidos",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Restrict);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Articulos_CAT_ID",
                 table: "Articulos",
                 column: "CAT_ID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Articulos_EST_ID",
-                table: "Articulos",
-                column: "EST_ID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Articulos_PROV_ID",
@@ -410,14 +381,24 @@ namespace shoopsupermarket.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_DetallePedidos_ART_ID",
-                table: "DetallePedidos",
-                column: "ART_ID");
+                name: "IX_Carts_ArticuloId",
+                table: "Carts",
+                column: "ArticuloId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Pedidos_ESTADOID",
+                name: "IX_DetallePedidos_ArticuloID",
+                table: "DetallePedidos",
+                column: "ArticuloID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DetallePedidos_PedidoID",
+                table: "DetallePedidos",
+                column: "PedidoID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pedidos_EstadoId",
                 table: "Pedidos",
-                column: "ESTADOID");
+                column: "EstadoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -438,7 +419,13 @@ namespace shoopsupermarket.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Carts");
+
+            migrationBuilder.DropTable(
                 name: "DetallePedidos");
+
+            migrationBuilder.DropTable(
+                name: "ShoppingCarts");
 
             migrationBuilder.DropTable(
                 name: "SliderConfiguracion");

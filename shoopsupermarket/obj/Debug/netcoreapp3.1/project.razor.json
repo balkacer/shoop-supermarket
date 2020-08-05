@@ -20551,6 +20551,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Details.cshtml",
+      "TargetPath": "Views\\Estados\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\TwoFactorAuthentication.cshtml",
       "FileKind": "mvc"
@@ -20568,11 +20573,6 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\ResetPasswordConfirmation.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Index.cshtml",
-      "TargetPath": "Views\\Estado\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20611,11 +20611,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Edit.cshtml",
-      "TargetPath": "Views\\Estado\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Proveedor\\Index.cshtml",
       "TargetPath": "Views\\Proveedor\\Index.cshtml",
       "FileKind": "mvc"
@@ -20638,6 +20633,11 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Create.cshtml",
+      "TargetPath": "Views\\Estados\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20701,11 +20701,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Delete.cshtml",
-      "TargetPath": "Views\\Estado\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20713,6 +20708,11 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Edit.cshtml",
       "TargetPath": "Views\\Articulos\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Edit.cshtml",
+      "TargetPath": "Views\\Estados\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20766,6 +20766,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Delete.cshtml",
+      "TargetPath": "Views\\Estados\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Shared\\_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
@@ -20791,13 +20796,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Details.cshtml",
-      "TargetPath": "Views\\Estado\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estado\\Create.cshtml",
-      "TargetPath": "Views\\Estado\\Create.cshtml",
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Estados\\Index.cshtml",
+      "TargetPath": "Views\\Estados\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
