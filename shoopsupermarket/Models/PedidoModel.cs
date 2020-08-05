@@ -28,7 +28,13 @@ namespace shoopsupermarket.Models
         public int EstadoId { get; set; }
         public Estado Estado { get; set; }
         public System.DateTime OrderDate      { get; set; }
-        public List<DetallePedido> DetallePedidos { get; set; }
+
+        private List<DetallePedido> _DetallePedidos;
+        public List<DetallePedido> DetallePedidos
+        {
+            get { return _DetallePedidos/* = new List<DetallePedido>().Find(x => x.ORD_ID == ID)*/; }
+            set { _DetallePedidos = value; }
+        }
     }
 }
     //     public double SubtotalSum(){

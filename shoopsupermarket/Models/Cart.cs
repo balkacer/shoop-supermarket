@@ -10,6 +10,17 @@ namespace shoopsupermarket.Models
         public int      ArticuloId     { get; set; }
         public int      Count       { get; set; }
         public System.DateTime DateCreated { get; set; }
-        public virtual Articulo Articulo  { get; set; }
+        private Articulo _Articulo;
+        public Articulo Articulo
+        {
+            get 
+            { 
+                return _Articulo = new Articulo().GetById(ArticuloId);
+            }
+            set 
+            { 
+                _Articulo = value;
+            }
+        }
     }
 }

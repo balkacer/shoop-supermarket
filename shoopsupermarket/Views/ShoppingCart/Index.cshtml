@@ -1,3 +1,6 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @model shoopsupermarket.ViewModels.ShoppingCartViewModel
 @{
     ViewBag.Title = "Shopping Cart";
@@ -13,19 +16,22 @@
                 <div class="card my-2">
                     <div class="card-body row">
                         <div class="col-2">
-                            @* <a href="@item.Articulo.IMG" target="_blank" rel="noopener noreferrer">
-                                <img width="100vh" src="@item.Articulo.IMG" alt="">
-                            </a>*@
+                            <a href="@item.Articulo.IMG" target="_blank" rel="noopener noreferrer">
+                                <img width="80vh" src="@item.Articulo.IMG" alt="">
+                            </a>
                         </div>
-                        <div class="col-6">
-                            @* @Html.ActionLink(item.Articulo.DESC, "Details", "Articulos", new { id = item.ArticuloId }, null) *@
+                        <div class="col-4">
+                            @Html.ActionLink(item.Articulo.DESC, "Details", "Articulos", new { id = item.ArticuloId }, null)
                         </div>
                         <div class="col">
                             <p>@item.Count</p>
                         </div>
                         <div class="col">
-                            @item.RecordId
-                            @* Precio: @item.Articulo.PRE_VENT *@
+                            <p>@item.Articulo.PRE_VENT</p>
+                        </div>
+                        <div class="col">
+                            @{ decimal Subtotal = item.Count * item.Articulo.PRE_VENT; }
+                            <p>@Subtotal</p>
                         </div>
                         <div class="col">
                             <form asp-action="RemoveFromCart" asp-route-id="@item.RecordId">
@@ -33,9 +39,6 @@
                                     <i class="fa fa-trash"></i>
                                 </button>
                             </form>
-                            @* <a asp-controller="ShoppingCart" asp-action="RemoveFromCart" asp-route-id="@item.RecordId" class="btn btn-danger">
-                                <i class="fa fa-trash"></i>
-                            </a> *@
                         </div>
                     </div>
                 </div>
@@ -53,7 +56,14 @@
                             <h5 class="card-title float-right">@Model.CartTotal</h5>
                         </div>
                     </div>
-                    @Html.ActionLink("Checkout", "AddressAndPayment", "Checkout", null, new { @class = "btn btn-primary" })
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        @Html.ActionLink("Checkout", "Index", "Home", null, new { @class = "btn btn-primary" })
+                    }
+                    else
+                    {
+                        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Checkout</a>
+                    }
                 </div>
             </div>
         </div>

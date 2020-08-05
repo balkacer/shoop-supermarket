@@ -6,26 +6,35 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item my-auto">
-        <a id="manage" style="cursor: pointer;" class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt="" width="30">
+    <li class="nav-item my-auto ml-md-2">
+        <a id="manage" style="cursor: pointer;" class="btn btn-primary" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+            <i class="fa fa-user"></i>
         </a>
     </li>
-    <li class="nav-item my-auto">
+    <li class="nav-item my-auto ml-md-2">
         <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-            <button  type="submit" class="btn btn-danger btn-sm text-white my-1 ml-2">Cerrar sesion</button>
+            <button  type="submit" class="btn btn-primary"  title="Log Out">
+                <i class="fa fa-sign-out"></i>
+            </button>
         </form>
     </li>
 }
 else
 {
-    <li class="nav-item">
-        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Iniciar sesion</a>
+    <li class="nav-item my-auto ml-md-2">
+        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Register" title="Register">
+            <i class="fa fa-user-plus"></i>
+        </a>
+    </li>
+    <li class="nav-item my-auto ml-md-2">
+        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login" title="Sing in">
+            <i class="fa fa-sign-in"></i>
+        </a>
     </li>
 }
-    <li class="nav-item my-auto">
-        <a class="" asp-controller="ShoppingCart" asp-action="Index" title="ShoppingCart">
-            <img src="https://img.icons8.com/ios-glyphs/30/000000/shopping-cart.png" alt="" width="30">
+    <li class="nav-item my-auto ml-md-2">
+        <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="Index" title="ShoppingCart">
+            <i class="fa fa-shopping-cart"></i>
         </a>
     </li>
 </ul>

@@ -43,7 +43,6 @@ namespace shoopsupermarket.Controllers
             var cart = ShoppingCart.GetCart(this.HttpContext);
  
             cart.AddToCart(articuloAgregado);
-            Console.WriteLine(articuloAgregado.DESC);
  
             // Go back to the main store page for more shopping
             return RedirectToAction("Index", "Home");
