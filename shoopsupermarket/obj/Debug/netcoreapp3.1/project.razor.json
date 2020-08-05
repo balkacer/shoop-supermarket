@@ -20596,11 +20596,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Details.cshtml",
-      "TargetPath": "Views\\Checkout\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Pedido\\Details.cshtml",
       "TargetPath": "Views\\Pedido\\Details.cshtml",
       "FileKind": "mvc"
@@ -20618,11 +20613,6 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Delete.cshtml",
-      "TargetPath": "Views\\Checkout\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20826,11 +20816,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Edit.cshtml",
-      "TargetPath": "Views\\Checkout\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\ShoppingCart\\Index.cshtml",
       "TargetPath": "Views\\ShoppingCart\\Index.cshtml",
       "FileKind": "mvc"
@@ -20918,6 +20903,11 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Pedido\\Map.cshtml",
+      "TargetPath": "Views\\Pedido\\Map.cshtml",
       "FileKind": "mvc"
     },
     {

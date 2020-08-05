@@ -947,7 +947,6 @@ C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\n
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Carrito\Index.cshtml.g.cs
 C:\Users\DELL PC\Desktop\Enmanuel\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 >>>>>>> 9e6737501d25c45aa025ad4e30d6e70bee0d7976
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Carrito\Index.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Create.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Delete.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\SliderConfiguracion\Details.cshtml.g.cs
@@ -991,7 +990,5 @@ C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Edit.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Index.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Create.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Delete.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Details.cshtml.g.cs
-C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Edit.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Index.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Pedido\Map.cshtml.g.cs

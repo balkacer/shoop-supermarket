@@ -57,6 +57,7 @@ namespace shoopsupermarket.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [ActionName("DataCheckout")]
         public async Task<IActionResult> Create([Bind("ID,Username,FirstName,LastName,Address,City,State,Longitud,Latitud,Country,Phone,Total,EstadoId,pedidoDate")] Pedido pedido)
         {
             if (ModelState.IsValid)
@@ -79,93 +80,12 @@ namespace shoopsupermarket.Controllers
 
                 _context.Add(pedido);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                
+                return RedirectToAction("Index","Stripe", new { id = pedido.ID });
             }
             ViewData["EstadoId"] = new SelectList(_context.Estados, "ID", "NOMBRE", pedido.EstadoId);
             return View(pedido);
-        }
-
-        // GET: Checkout/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var pedido = await _context.Pedidos.FindAsync(id);
-            if (pedido == null)
-            {
-                return NotFound();
-            }
-            ViewData["EstadoId"] = new SelectList(_context.Estados, "ID", "NOMBRE", pedido.EstadoId);
-            return View(pedido);
-        }
-
-        // POST: Checkout/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Username,FirstName,LastName,Address,City,State,Longitud,Latitud,Country,Phone,Total,EstadoId,pedidoDate")] Pedido pedido)
-        {
-            if (id != pedido.ID)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(pedido);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!PedidoExists(pedido.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["EstadoId"] = new SelectList(_context.Estados, "ID", "NOMBRE", pedido.EstadoId);
-            return View(pedido);
-        }
-
-        // GET: Checkout/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var pedido = await _context.Pedidos
-                .Include(p => p.Estado)
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (pedido == null)
-            {
-                return NotFound();
-            }
-
-            return View(pedido);
-        }
-
-        // POST: Checkout/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var pedido = await _context.Pedidos.FindAsync(id);
-            _context.Pedidos.Remove(pedido);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool PedidoExists(int id)

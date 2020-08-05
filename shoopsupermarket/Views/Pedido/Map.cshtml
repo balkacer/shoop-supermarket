@@ -1,0 +1,48 @@
+@model IEnumerable<Pedido>
+@{
+    ViewData["Title"] = "Map";
+}
+
+<div class="row">
+    <div class="col">
+        @foreach (Estado es in Estado.Get()){
+            @Html.ActionLink(es.NOMBRE, "Map", "Pedido", new { e = es.NOMBRE }, new { @class = "btn btn-primary" })
+        }
+    </div>
+    <div class="col-9">
+        <div class="card">
+            <div class="card-header">
+                Mapa
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <div id="map"></div>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    #map { height: 400px;}
+</style>
+
+<script>
+    var map = L.map('map').setView([18.5378682, -70.512547,15], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    
+    
+</script>
+
+@foreach (var item in Model)
+{
+    <script>
+        L.marker([@item.Latitud, @item.Longitud]).addTo(map)
+            .bindPopup('@item.FirstName @item.LastName')
+            .openPopup();
+    </script>
+}

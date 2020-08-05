@@ -8,6 +8,7 @@ namespace shoopsupermarket.Models
     {
         [JsonProperty("id")]
         public string Id { get; set; }
+        public double Total { get; set; }
     }
 
     public class PaymentIntentCreateRequest

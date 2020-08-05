@@ -1,0 +1,49 @@
+.prod:hover{
+    transition: .5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-7px);
+}
+
+a{
+    text-decoration: none !important;
+}
+
+#carouselExampleControls{
+    height: 40vh !important;
+    overflow: hidden !important;
+    
+}
+
+.btn:focus{
+    box-shadow: none;
+}
+
+.card{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* .card .card-body input[type="number"]{
+    position: relative;
+    width: 30%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.card .card-body a{
+    width: 70%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+} */
+/* 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+} */

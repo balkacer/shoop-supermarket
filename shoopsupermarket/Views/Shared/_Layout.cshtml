@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 </head>
 <body>
     <header class="sticky-top">
@@ -27,6 +29,9 @@
                         <a class="nav-link text-dark" asp-controller="SliderConfiguracion" asp-action="Index">Slider</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-dark" asp-controller="Admin" asp-action="Index">Administrador</a>
+                    </li>
+                    @* <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Articulos" asp-action="Index">Articulos</a>
                     </li>
                     <li class="nav-item">
@@ -34,7 +39,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-controller="Categorias" asp-action="Index">Categorias</a>
-                    </li>
+                    </li> *@
                 </ul>
                 <form class="my-2 my-lg-0" style="width: 100%;" asp-controller="Home" asp-action="Search" method="GET">
                     <div class="input-group">

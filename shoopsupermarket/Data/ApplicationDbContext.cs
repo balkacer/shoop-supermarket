@@ -35,7 +35,7 @@ namespace shoopsupermarket.Data
             string sqlConLocalA = "Server=LAPTOP-9IB9T0EQ\\MYSERVER;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true";
             string sqlConLocalE = "Server=localhost\\SQLEXPRESS;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true";
             string sqlConHosting = "Data Source=SQL5063.site4now.net;Initial Catalog=DB_A650B9_shoopdb;User Id=DB_A650B9_shoopdb_admin;Password=DataBase2020@";
-            optionsBuilder.UseSqlServer(sqlConLocalA);
+            optionsBuilder.UseSqlServer(sqlConHosting);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
