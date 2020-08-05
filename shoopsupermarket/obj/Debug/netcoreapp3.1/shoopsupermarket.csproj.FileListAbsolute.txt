@@ -990,3 +990,8 @@ C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Details.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Edit.cshtml.g.cs
 C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Estados\Index.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Create.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Delete.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Details.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Edit.cshtml.g.cs
+C:\Users\user\Desktop\shoop-supermarket\shoopsupermarket\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Index.cshtml.g.cs

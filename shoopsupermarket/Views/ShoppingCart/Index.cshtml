@@ -56,14 +56,9 @@
                             <h5 class="card-title float-right">@Model.CartTotal</h5>
                         </div>
                     </div>
-                    @if (SignInManager.IsSignedIn(User))
-                    {
-                        @Html.ActionLink("Checkout", "Create", "Pedido", null, new { @class = "btn btn-primary" })
-                    }
-                    else
-                    {
-                        <a class="btn btn-primary" id="login" asp-area="Identity" asp-page="/Account/Login">Checkout</a>
-                    }
+                   
+                    @Html.ActionLink("Checkout", "Create", "Checkout", null, new { @class = "btn btn-primary" })
+                  
                 </div>
             </div>
         </div>

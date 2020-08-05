@@ -20531,6 +20531,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Create.cshtml",
+      "TargetPath": "Views\\Checkout\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Details.cshtml",
       "TargetPath": "Views\\Articulos\\Details.cshtml",
       "FileKind": "mvc"
@@ -20591,6 +20596,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Details.cshtml",
+      "TargetPath": "Views\\Checkout\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Pedido\\Details.cshtml",
       "TargetPath": "Views\\Pedido\\Details.cshtml",
       "FileKind": "mvc"
@@ -20608,6 +20618,11 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\Manage\\PersonalData.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Delete.cshtml",
+      "TargetPath": "Views\\Checkout\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20811,6 +20826,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Edit.cshtml",
+      "TargetPath": "Views\\Checkout\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\ShoppingCart\\Index.cshtml",
       "TargetPath": "Views\\ShoppingCart\\Index.cshtml",
       "FileKind": "mvc"
@@ -20908,6 +20928,11 @@
     {
       "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Articulos\\Delete.cshtml",
       "TargetPath": "Views\\Articulos\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\user\\Desktop\\shoop-supermarket\\shoopsupermarket\\Views\\Checkout\\Index.cshtml",
+      "TargetPath": "Views\\Checkout\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
