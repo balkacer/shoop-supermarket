@@ -1,4 +1,5 @@
-﻿using System.Net;
+﻿using System.Security.AccessControl;
+using System.Net;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -9,9 +10,11 @@ using Microsoft.Extensions.Logging;
 using shoopsupermarket.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Routing;
+using Microsoft.AspNetCore.Session;
 using System.Configuration;
 using shoopsupermarket.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace shoopsupermarket.Controllers
 {
@@ -35,8 +38,7 @@ namespace shoopsupermarket.Controllers
         [Route("/{action}")]
         public async Task<IActionResult> Search(string q, string c)
         {
-            ViewData["Desc"] = q;
-
+            
             var articulos = from s in _context.Articulos select s;
             var categorias = from s in _context.Categorias select s;
 

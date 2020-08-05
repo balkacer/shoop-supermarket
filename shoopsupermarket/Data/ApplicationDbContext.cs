@@ -30,7 +30,7 @@ namespace shoopsupermarket.Data
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer("Server=LAPTOP-9IB9T0EQ\\MYSERVER;Database=shoopdb;Trusted_Connection=True;MultipleActiveResultSets=true");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

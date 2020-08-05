@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Stripe;
+using System.Web;
 
 namespace shoopsupermarket
 {
@@ -32,6 +33,7 @@ namespace shoopsupermarket
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
@@ -39,9 +41,18 @@ namespace shoopsupermarket
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-           services.AddRazorPages();
+            services.AddRazorPages();
 
-            services.AddMvc()
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
+            services.AddMvcCore()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
             //services.AddPortableObjectLocalization();
 
@@ -88,6 +99,8 @@ namespace shoopsupermarket
             app.UseAuthorization();
 
             app.UseRequestLocalization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

@@ -24,11 +24,6 @@ namespace shoopsupermarket.Controllers
         [HttpPost]
         public IActionResult Index(PaymentIntentCreateRequest request)
         {
-            var json = new Dictionary<string, string>
-            {
-                {"", ""},
-                {"", ""},
-            };
 
             var paymentIntents = new PaymentIntentService();
             var paymentIntent = paymentIntents.Create(new PaymentIntentCreateOptions

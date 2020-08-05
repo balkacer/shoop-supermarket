@@ -1,5 +1,5 @@
 // A reference to Stripe.js initialized with your real test publishable API key.
-var stripe = Stripe("pk_test_51HAmjTDeFU75Q4Gnvel89YbpD4cbKSBfOq6xm2csFjMcFgXY0wDRMtEZEqbuispFDsZT4E04K91GokvUGPRrRKYr00jrndqOHa");
+var stripe = Stripe("sk_test_51HAmjTDeFU75Q4GnHtJZKBfKpHBbMrpzdpImMYDXWl9A2sHOItIUeEbJcLwFKGq04NhknQiOsHgpzptD4zuipXFK00Ds6cFC0K");
 
 // The items the customer wants to buy
 var purchase = {
