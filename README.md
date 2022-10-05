@@ -1,2 +1,2 @@
 # shoop-supermarket
-Practica final de Programación III
+Practica final de Programación III.
